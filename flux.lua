@@ -264,6 +264,8 @@ FLuxusMobile.KeyPage.BackgroundTransparency = 1.000
 FLuxusMobile.KeyPage.BorderColor3 = Color3.fromRGB(20, 20, 23)
 FLuxusMobile.KeyPage.Position = UDim2.new(0.33065027, 0, 0.290977955, 0)
 FLuxusMobile.KeyPage.Size = UDim2.new(0, 404, 0, 232)
+FLuxusMobile.KeyPage.Draggable = true
+FLuxusMobile.KeyPage.Active = true
 
 FLuxusMobile.UP.Name = "UP"
 FLuxusMobile.UP.Parent = FLuxusMobile.KeyPage
@@ -534,6 +536,8 @@ FLuxusMobile.MainPage.BackgroundColor3 = Color3.fromRGB(24, 26, 27)
 FLuxusMobile.MainPage.Position = UDim2.new(0.164392054, 0, 0.199724525, 0)
 FLuxusMobile.MainPage.Size = UDim2.new(0, 691, 0, 385)
 FLuxusMobile.MainPage.Visible = false
+FLuxusMobile.MainPage.Draggable = true
+FLuxusMobile.MainPage.Active = true
 
 FLuxusMobile.UP_3.Name = "UP"
 FLuxusMobile.UP_3.Parent = FLuxusMobile.MainPage
@@ -1848,6 +1852,8 @@ FLuxusMobile.LoginPage.BorderColor3 = Color3.fromRGB(20, 20, 23)
 FLuxusMobile.LoginPage.Position = UDim2.new(0.33065027, 0, 0.290977955, 0)
 FLuxusMobile.LoginPage.Size = UDim2.new(0, 404, 0, 255)
 FLuxusMobile.LoginPage.Visible = false
+FLuxusMobile.LoginPage.Draggable = true
+FLuxusMobile.LoginPage.Active = true
 
 FLuxusMobile.UP_4.Name = "UP"
 FLuxusMobile.UP_4.Parent = FLuxusMobile.LoginPage
@@ -2028,6 +2034,7 @@ FLuxusMobile.HelpFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 FLuxusMobile.HelpFrame_2.Position = UDim2.new(-0.0618811883, 0, 0.237068951, 0)
 FLuxusMobile.HelpFrame_2.Size = UDim2.new(0, 451, 0, 165)
 FLuxusMobile.HelpFrame_2.Visible = false
+
 
 FLuxusMobile.UP_5.Name = "UP"
 FLuxusMobile.UP_5.Parent = FLuxusMobile.HelpFrame_2
