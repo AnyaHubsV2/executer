@@ -1,7 +1,56 @@
--- Gui to Lua
--- Version: 3.2
 
--- Instances:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 local vysion = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
@@ -33,75 +82,110 @@ local scripts = Instance.new("Frame")
 local UICorner_12 = Instance.new("UICorner")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local UICorner_13 = Instance.new("UICorner")
+local UIListLayout = Instance.new("UIListLayout")
+local List = Instance.new("Folder")
+local newhubs = Instance.new("Frame")
+local load = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
 local Name = Instance.new("TextLabel")
 local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
 local Close = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
-local UICorner_15 = Instance.new("UICorner")
-local Frames = Instance.new("Frame")
 local UICorner_16 = Instance.new("UICorner")
+local UICorner_17 = Instance.new("UICorner")
+local Frames = Instance.new("Frame")
+local UICorner_18 = Instance.new("UICorner")
 local Main = Instance.new("Frame")
 local welcome = Instance.new("Frame")
-local UICorner_17 = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
+local UICorner_19 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
 local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
 local ImageLabel = Instance.new("ImageLabel")
-local UICorner_18 = Instance.new("UICorner")
-local UICorner_19 = Instance.new("UICorner")
-local devs = Instance.new("Frame")
 local UICorner_20 = Instance.new("UICorner")
-local TextLabel_2 = Instance.new("TextLabel")
+local UICorner_21 = Instance.new("UICorner")
+local devs = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
 local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
 local alsDpsg = Instance.new("TextLabel")
 local Executor = Instance.new("Frame")
-local UICorner_21 = Instance.new("UICorner")
+local UICorner_23 = Instance.new("UICorner")
 local execute = Instance.new("Frame")
-local UICorner_22 = Instance.new("UICorner")
+local UICorner_24 = Instance.new("UICorner")
 local TextBox = Instance.new("TextBox")
 local buttons_2 = Instance.new("Frame")
-local UICorner_23 = Instance.new("UICorner")
-local TextButton = Instance.new("TextButton")
-local UICorner_24 = Instance.new("UICorner")
-local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
-local TextButton_2 = Instance.new("TextButton")
 local UICorner_25 = Instance.new("UICorner")
-local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
-local TextButton_3 = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
 local UICorner_26 = Instance.new("UICorner")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local TextButton_3 = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+local TextButton_4 = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
 local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
 local Frame = Instance.new("Frame")
-local UICorner_27 = Instance.new("UICorner")
+local UICorner_29 = Instance.new("UICorner")
 local Scripthub = Instance.new("Frame")
-local UICorner_28 = Instance.new("UICorner")
+local UICorner_30 = Instance.new("UICorner")
 local save = Instance.new("Frame")
 local name = Instance.new("TextBox")
-local UICorner_29 = Instance.new("UICorner")
-local TextLabel_4 = Instance.new("TextLabel")
-local TextLabel_5 = Instance.new("TextLabel")
-local code = Instance.new("TextBox")
-local UICorner_30 = Instance.new("UICorner")
-local TextButton_4 = Instance.new("TextButton")
 local UICorner_31 = Instance.new("UICorner")
-local UICorner_32 = Instance.new("UICorner")
-local scriptfinder = Instance.new("Frame")
-local UICorner_33 = Instance.new("UICorner")
-local search = Instance.new("Frame")
-local TextButton_5 = Instance.new("TextButton")
-local UICorner_34 = Instance.new("UICorner")
-local TextBox_2 = Instance.new("TextBox")
-local UICorner_35 = Instance.new("UICorner")
-local ScrollingFrame_2 = Instance.new("ScrollingFrame")
-local UIListLayout = Instance.new("UIListLayout")
-local UICorner_36 = Instance.new("UICorner")
-local Settings = Instance.new("Frame")
-local UICorner_37 = Instance.new("UICorner")
+local TextLabel_5 = Instance.new("TextLabel")
 local TextLabel_6 = Instance.new("TextLabel")
+local code = Instance.new("TextBox")
+local UICorner_32 = Instance.new("UICorner")
+local TextButton_5 = Instance.new("TextButton")
+local UICorner_33 = Instance.new("UICorner")
+local UICorner_34 = Instance.new("UICorner")
+local scriptfinder = Instance.new("Frame")
+local UICorner_35 = Instance.new("UICorner")
+local search = Instance.new("Frame")
+local TextButton_6 = Instance.new("TextButton")
+local UICorner_36 = Instance.new("UICorner")
+local TextBox_2 = Instance.new("TextBox")
+local UICorner_37 = Instance.new("UICorner")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local Folder = Instance.new("Folder")
+local list = Instance.new("Frame")
+local UICorner_38 = Instance.new("UICorner")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local UICorner_39 = Instance.new("UICorner")
+local load_2 = Instance.new("TextButton")
+local UICorner_40 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
+local UICorner_41 = Instance.new("UICorner")
+local UICorner_42 = Instance.new("UICorner")
+local Settings = Instance.new("Frame")
+local UICorner_43 = Instance.new("UICorner")
+local TextButton_7 = Instance.new("TextButton")
+local UICorner_44 = Instance.new("UICorner")
+local TextButton_8 = Instance.new("TextButton")
+local UICorner_45 = Instance.new("UICorner")
+local TextButton_9 = Instance.new("TextButton")
+local UICorner_46 = Instance.new("UICorner")
+local TextButton_10 = Instance.new("TextButton")
+local UICorner_47 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
 local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
+local open = Instance.new("Frame")
+local ImageButton = Instance.new("ImageButton")
+local UICorner_48 = Instance.new("UICorner")
+local UICorner_49 = Instance.new("UICorner")
+local background = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local UICorner_50 = Instance.new("UICorner")
+local TextLabel_9 = Instance.new("TextLabel")
+local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
 
 --Properties:
 
 vysion.Name = "vysion"
-vysion.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+vysion.Parent = game.CoreGui
 vysion.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 main.Name = "main"
@@ -109,8 +193,8 @@ main.Parent = vysion
 main.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 main.BorderSizePixel = 0
-main.Position = UDim2.new(0.267630845, 0, 0.238889009, 0)
-main.Size = UDim2.new(0.46265927, 0, 0.53508693, 0)
+main.Position = UDim2.new(0.254000008, 0, -5, 0)
+main.Size = UDim2.new(0.463, 0, 0.535000026, 0)
 
 buttons.Name = "buttons"
 buttons.Parent = main
@@ -277,6 +361,61 @@ ScrollingFrame.Size = UDim2.new(1, 0, 0.995135188, 0)
 
 UICorner_13.Parent = ScrollingFrame
 
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 3)
+
+List.Name = "List"
+List.Parent = ScrollingFrame
+
+newhubs.Name = "newhubs"
+newhubs.Parent = List
+newhubs.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+newhubs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+newhubs.BorderSizePixel = 0
+newhubs.Position = UDim2.new(0, 0, 3.05175774e-07, 0)
+newhubs.Size = UDim2.new(0, 161, 0, 54)
+newhubs.Visible = false
+
+load.Name = "load"
+load.Parent = newhubs
+load.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+load.BorderColor3 = Color3.fromRGB(0, 0, 0)
+load.BorderSizePixel = 0
+load.Position = UDim2.new(0.770186305, 0, 0.525341153, 0)
+load.Size = UDim2.new(0, 37, 0, 22)
+load.Font = Enum.Font.SourceSans
+load.Text = "Load"
+load.TextColor3 = Color3.fromRGB(255, 255, 255)
+load.TextSize = 14.000
+
+UICorner_14.Parent = load
+
+TextButton.Parent = newhubs
+TextButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.490683287, 0, 0.525341153, 0)
+TextButton.Size = UDim2.new(0, 37, 0, 22)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Delete"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
+
+UICorner_15.Parent = TextButton
+
+TextLabel.Parent = newhubs
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0, 0, 0.00740814582, 0)
+TextLabel.Size = UDim2.new(0, 90, 0, 17)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "ScriptName"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
 Name.Name = "Name"
 Name.Parent = main
 Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -307,9 +446,9 @@ Close.Text = "X"
 Close.TextColor3 = Color3.fromRGB(255, 255, 255)
 Close.TextSize = 14.000
 
-UICorner_14.Parent = Close
+UICorner_16.Parent = Close
 
-UICorner_15.Parent = main
+UICorner_17.Parent = main
 
 Frames.Name = "Frames"
 Frames.Parent = main
@@ -319,8 +458,8 @@ Frames.BorderSizePixel = 0
 Frames.Position = UDim2.new(0.0971195921, 0, 0.0795079693, 0)
 Frames.Size = UDim2.new(0.690494478, 0, 0.855915129, 0)
 
-UICorner_16.CornerRadius = UDim.new(0, 5)
-UICorner_16.Parent = Frames
+UICorner_18.CornerRadius = UDim.new(0, 5)
+UICorner_18.Parent = Frames
 
 Main.Name = "Main"
 Main.Parent = Frames
@@ -338,37 +477,37 @@ welcome.BorderSizePixel = 0
 welcome.Position = UDim2.new(0.0326976478, 0, 0.0576375276, 0)
 welcome.Size = UDim2.new(0.931880593, 0, 0.350558937, 0)
 
-UICorner_17.CornerRadius = UDim.new(0, 5)
-UICorner_17.Parent = welcome
+UICorner_19.CornerRadius = UDim.new(0, 5)
+UICorner_19.Parent = welcome
 
-TextLabel.Parent = welcome
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.295321643, 0, 0.290322572, 0)
-TextLabel.Size = UDim2.new(0.657894731, 0, 0.354839027, 0)
-TextLabel.Font = Enum.Font.SourceSansBold
-TextLabel.Text = "Welcome: UserNameHere II"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 25.000
-TextLabel.TextWrapped = true
+TextLabel_2.Parent = welcome
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.295321643, 0, 0.290322572, 0)
+TextLabel_2.Size = UDim2.new(0.657894731, 0, 0.354839027, 0)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "Welcome: UserNameHere II"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 25.000
+TextLabel_2.TextWrapped = true
 
-UITextSizeConstraint_3.Parent = TextLabel
+UITextSizeConstraint_3.Parent = TextLabel_2
 UITextSizeConstraint_3.MaxTextSize = 73
 
 ImageLabel.Parent = welcome
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.Size = UDim2.new(0, 93, 0, 88)
+ImageLabel.Size = UDim2.new(0.27192983, 0, 0.946236551, 0)
 ImageLabel.Image = "rbxassetid://924320031"
 
-UICorner_18.CornerRadius = UDim.new(1, 5)
-UICorner_18.Parent = ImageLabel
+UICorner_20.CornerRadius = UDim.new(1, 5)
+UICorner_20.Parent = ImageLabel
 
-UICorner_19.CornerRadius = UDim.new(0, 5)
-UICorner_19.Parent = Main
+UICorner_21.CornerRadius = UDim.new(0, 5)
+UICorner_21.Parent = Main
 
 devs.Name = "devs"
 devs.Parent = Main
@@ -378,32 +517,32 @@ devs.BorderSizePixel = 0
 devs.Position = UDim2.new(0.0326976478, 0, 0.472277135, 0)
 devs.Size = UDim2.new(0.931880593, 0, 0.358097851, 0)
 
-UICorner_20.CornerRadius = UDim.new(0, 5)
-UICorner_20.Parent = devs
-
-TextLabel_2.Parent = devs
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.327485383, 0, 0.0433503836, 0)
-TextLabel_2.Size = UDim2.new(0.343218029, 0, 0.290322542, 0)
-TextLabel_2.Font = Enum.Font.SourceSansBold
-TextLabel_2.Text = "Syctro : Owner"
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextSize = 20.000
+UICorner_22.CornerRadius = UDim.new(0, 5)
+UICorner_22.Parent = devs
 
 TextLabel_3.Parent = devs
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.163742706, 0, 0.68545562, 0)
-TextLabel_3.Size = UDim2.new(0.673627377, 0, 0.290322542, 0)
+TextLabel_3.Position = UDim2.new(0.327485383, 0, 0.0433503836, 0)
+TextLabel_3.Size = UDim2.new(0.343218029, 0, 0.290322542, 0)
 TextLabel_3.Font = Enum.Font.SourceSansBold
-TextLabel_3.Text = "SA.DEV : Scripter & UI Designer"
+TextLabel_3.Text = "Syctro : Owner"
 TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextSize = 20.000
+
+TextLabel_4.Parent = devs
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.163742706, 0, 0.601231456, 0)
+TextLabel_4.Size = UDim2.new(0.673627377, 0, 0.290322542, 0)
+TextLabel_4.Font = Enum.Font.SourceSansBold
+TextLabel_4.Text = "SA.DEV : Scripter & UI Designer"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 20.000
 
 alsDpsg.Name = "alsDpsg"
 alsDpsg.Parent = Main
@@ -427,8 +566,8 @@ Executor.Position = UDim2.new(8.31541911e-08, 0, -1.72091603e-07, 0)
 Executor.Size = UDim2.new(0.999999821, 0, 0.997333169, 0)
 Executor.Visible = false
 
-UICorner_21.CornerRadius = UDim.new(0, 5)
-UICorner_21.Parent = Executor
+UICorner_23.CornerRadius = UDim.new(0, 5)
+UICorner_23.Parent = Executor
 
 execute.Name = "execute"
 execute.Parent = Executor
@@ -438,8 +577,8 @@ execute.BorderSizePixel = 0
 execute.Position = UDim2.new(0.0299728494, 0, 0.0376944542, 0)
 execute.Size = UDim2.new(0.940054953, 0, 0.727504075, 0)
 
-UICorner_22.CornerRadius = UDim.new(0, 5)
-UICorner_22.Parent = execute
+UICorner_24.CornerRadius = UDim.new(0, 5)
+UICorner_24.Parent = execute
 
 TextBox.Parent = execute
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -465,64 +604,64 @@ buttons_2.BorderSizePixel = 0
 buttons_2.Position = UDim2.new(0.0299728494, 0, 0.799123585, 0)
 buttons_2.Size = UDim2.new(0.940054953, 0, 0.16585584, 0)
 
-UICorner_23.CornerRadius = UDim.new(0, 5)
-UICorner_23.Parent = buttons_2
-
-TextButton.Parent = buttons_2
-TextButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.0202898532, 0, 0.0909090936, 0)
-TextButton.Size = UDim2.new(0.1942029, 0, 0.795454562, 0)
-TextButton.Font = Enum.Font.SourceSansBold
-TextButton.Text = "Load"
-TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.TextScaled = true
-TextButton.TextSize = 20.000
-TextButton.TextWrapped = true
-
-UICorner_24.CornerRadius = UDim.new(0, 5)
-UICorner_24.Parent = TextButton
-
-UITextSizeConstraint_4.Parent = TextButton
-UITextSizeConstraint_4.MaxTextSize = 20
+UICorner_25.CornerRadius = UDim.new(0, 5)
+UICorner_25.Parent = buttons_2
 
 TextButton_2.Parent = buttons_2
 TextButton_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(0.23768118, 0, 0.0909090936, 0)
+TextButton_2.Position = UDim2.new(0.0202898532, 0, 0.0909090936, 0)
 TextButton_2.Size = UDim2.new(0.1942029, 0, 0.795454562, 0)
 TextButton_2.Font = Enum.Font.SourceSansBold
-TextButton_2.Text = "Clear"
+TextButton_2.Text = "Load"
 TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.TextScaled = true
 TextButton_2.TextSize = 20.000
 TextButton_2.TextWrapped = true
 
-UICorner_25.CornerRadius = UDim.new(0, 5)
-UICorner_25.Parent = TextButton_2
+UICorner_26.CornerRadius = UDim.new(0, 5)
+UICorner_26.Parent = TextButton_2
 
-UITextSizeConstraint_5.Parent = TextButton_2
-UITextSizeConstraint_5.MaxTextSize = 20
+UITextSizeConstraint_4.Parent = TextButton_2
+UITextSizeConstraint_4.MaxTextSize = 20
 
 TextButton_3.Parent = buttons_2
 TextButton_3.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.BorderSizePixel = 0
-TextButton_3.Position = UDim2.new(0.614492774, 0, 0.0909090936, 0)
-TextButton_3.Size = UDim2.new(0.350724638, 0, 0.795454562, 0)
+TextButton_3.Position = UDim2.new(0.23768118, 0, 0.0909090936, 0)
+TextButton_3.Size = UDim2.new(0.1942029, 0, 0.795454562, 0)
 TextButton_3.Font = Enum.Font.SourceSansBold
-TextButton_3.Text = "Load Clipboard"
+TextButton_3.Text = "Clear"
 TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_3.TextScaled = true
 TextButton_3.TextSize = 20.000
 TextButton_3.TextWrapped = true
 
-UICorner_26.CornerRadius = UDim.new(0, 5)
-UICorner_26.Parent = TextButton_3
+UICorner_27.CornerRadius = UDim.new(0, 5)
+UICorner_27.Parent = TextButton_3
 
-UITextSizeConstraint_6.Parent = TextButton_3
+UITextSizeConstraint_5.Parent = TextButton_3
+UITextSizeConstraint_5.MaxTextSize = 20
+
+TextButton_4.Parent = buttons_2
+TextButton_4.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderSizePixel = 0
+TextButton_4.Position = UDim2.new(0.614492774, 0, 0.0909090936, 0)
+TextButton_4.Size = UDim2.new(0.350724638, 0, 0.795454562, 0)
+TextButton_4.Font = Enum.Font.SourceSansBold
+TextButton_4.Text = "Load Clipboard"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 20.000
+TextButton_4.TextWrapped = true
+
+UICorner_28.CornerRadius = UDim.new(0, 5)
+UICorner_28.Parent = TextButton_4
+
+UITextSizeConstraint_6.Parent = TextButton_4
 UITextSizeConstraint_6.MaxTextSize = 20
 
 Frame.Parent = buttons_2
@@ -532,8 +671,8 @@ Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.492753625, 0, -0.189673677, 0)
 Frame.Size = UDim2.new(0.0608695634, 0, 1.36363637, 0)
 
-UICorner_27.CornerRadius = UDim.new(0, 5)
-UICorner_27.Parent = Frame
+UICorner_29.CornerRadius = UDim.new(0, 5)
+UICorner_29.Parent = Frame
 
 Scripthub.Name = "Scripthub"
 Scripthub.Parent = Frames
@@ -544,8 +683,8 @@ Scripthub.Position = UDim2.new(8.31541911e-08, 0, -1.72091603e-07, 0)
 Scripthub.Size = UDim2.new(0.999999821, 0, 0.997333169, 0)
 Scripthub.Visible = false
 
-UICorner_28.CornerRadius = UDim.new(0, 5)
-UICorner_28.Parent = Scripthub
+UICorner_30.CornerRadius = UDim.new(0, 5)
+UICorner_30.Parent = Scripthub
 
 save.Name = "save"
 save.Parent = Scripthub
@@ -567,32 +706,32 @@ name.Text = ""
 name.TextColor3 = Color3.fromRGB(255, 255, 255)
 name.TextSize = 14.000
 
-UICorner_29.CornerRadius = UDim.new(0, 5)
-UICorner_29.Parent = name
-
-TextLabel_4.Parent = save
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.183544308, 0, 0.0635593235, 0)
-TextLabel_4.Size = UDim2.new(0.632911384, 0, 0.148305088, 0)
-TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = "Script Name:"
-TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.TextSize = 20.000
+UICorner_31.CornerRadius = UDim.new(0, 5)
+UICorner_31.Parent = name
 
 TextLabel_5.Parent = save
 TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.BackgroundTransparency = 1.000
 TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_5.BorderSizePixel = 0
-TextLabel_5.Position = UDim2.new(0.183544308, 0, 0.411016941, 0)
+TextLabel_5.Position = UDim2.new(0.183544308, 0, 0.0635593235, 0)
 TextLabel_5.Size = UDim2.new(0.632911384, 0, 0.148305088, 0)
 TextLabel_5.Font = Enum.Font.SourceSans
-TextLabel_5.Text = "Script Code:"
+TextLabel_5.Text = "Script Name:"
 TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.TextSize = 20.000
+
+TextLabel_6.Parent = save
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.183544308, 0, 0.411016941, 0)
+TextLabel_6.Size = UDim2.new(0.632911384, 0, 0.148305088, 0)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "Script Code:"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 20.000
 
 code.Name = "code"
 code.Parent = save
@@ -606,25 +745,25 @@ code.Text = ""
 code.TextColor3 = Color3.fromRGB(255, 255, 255)
 code.TextSize = 14.000
 
-UICorner_30.CornerRadius = UDim.new(0, 5)
-UICorner_30.Parent = code
-
-TextButton_4.Parent = save
-TextButton_4.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_4.BorderSizePixel = 0
-TextButton_4.Position = UDim2.new(0.424050629, 0, 0.771186411, 0)
-TextButton_4.Size = UDim2.new(0.148734182, 0, 0.199152544, 0)
-TextButton_4.Font = Enum.Font.SourceSans
-TextButton_4.Text = "+"
-TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_4.TextSize = 50.000
-
-UICorner_31.CornerRadius = UDim.new(0, 5)
-UICorner_31.Parent = TextButton_4
-
 UICorner_32.CornerRadius = UDim.new(0, 5)
-UICorner_32.Parent = save
+UICorner_32.Parent = code
+
+TextButton_5.Parent = save
+TextButton_5.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.BorderSizePixel = 0
+TextButton_5.Position = UDim2.new(0.424050629, 0, 0.771186411, 0)
+TextButton_5.Size = UDim2.new(0.148734182, 0, 0.199152544, 0)
+TextButton_5.Font = Enum.Font.SourceSans
+TextButton_5.Text = "+"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextSize = 50.000
+
+UICorner_33.CornerRadius = UDim.new(0, 5)
+UICorner_33.Parent = TextButton_5
+
+UICorner_34.CornerRadius = UDim.new(0, 5)
+UICorner_34.Parent = save
 
 scriptfinder.Name = "scriptfinder"
 scriptfinder.Parent = Frames
@@ -635,8 +774,8 @@ scriptfinder.Position = UDim2.new(8.31541911e-08, 0, -1.72091603e-07, 0)
 scriptfinder.Size = UDim2.new(0.999999821, 0, 0.997333169, 0)
 scriptfinder.Visible = false
 
-UICorner_33.CornerRadius = UDim.new(0, 5)
-UICorner_33.Parent = scriptfinder
+UICorner_35.CornerRadius = UDim.new(0, 5)
+UICorner_35.Parent = scriptfinder
 
 search.Name = "search"
 search.Parent = scriptfinder
@@ -646,181 +785,19 @@ search.BorderSizePixel = 0
 search.Position = UDim2.new(2.4946263e-07, 0, 5.75172585e-08, 0)
 search.Size = UDim2.new(0.99727571, 0, 0.180933654, 0)
 
-TextButton_5.Parent = search
-TextButton_5.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_5.BorderSizePixel = 0
-TextButton_5.Position = UDim2.new(0.789617479, 0, 0.0416666679, 0)
-TextButton_5.Size = UDim2.new(0.210382506, 0, 1, 0)
-TextButton_5.Font = Enum.Font.SourceSansBold
-TextButton_5.Text = "Find"
-TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_5.TextSize = 20.000
-TextButton_5.MouseButton1Click:Connect(function()
-local btn = game.Players.LocalPlayer.PlayerGui.vysion.main.Frames.scriptfinder.search.TextButton
+TextButton_6.Parent = search
+TextButton_6.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.BorderSizePixel = 0
+TextButton_6.Position = UDim2.new(0.789617479, 0, 0.0416666679, 0)
+TextButton_6.Size = UDim2.new(0.210382506, 0, 1, 0)
+TextButton_6.Font = Enum.Font.SourceSansBold
+TextButton_6.Text = "Find"
+TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.TextSize = 20.000
 
-local function AddTab(imageTab, creator, scriptname, source)
-	local scriptFrame = game.Players.LocalPlayer.PlayerGui.vysion.main.Frames.scriptfinder.search.ScrollingFrame	
-	local LIST = Instance.new("Frame")
-	local image = Instance.new("ImageLabel")
-	local UICorner = Instance.new("UICorner")
-	local Execute = Instance.new("TextButton")
-	local UICorner_2 = Instance.new("UICorner")
-	local Copy = Instance.new("TextButton")
-	local UICorner_3 = Instance.new("UICorner")
-	local Hide = Instance.new("TextButton")
-	local UICorner_4 = Instance.new("UICorner")
-	local NameScript = Instance.new("TextLabel")
-	local Credit = Instance.new("TextLabel")
-	local UICorner_5 = Instance.new("UICorner")
-
-	LIST.Name = "LIST"
-	LIST.Parent = scriptFrame
-	LIST.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-	LIST.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	LIST.BorderSizePixel = 0
-	LIST.Position = UDim2.new(-8.82010909e-08, 0, -1.57307099e-07, 0)
-	LIST.Size = UDim2.new(0, 327, 0, 110)
-
-	image.Name = "image"
-	image.Parent = LIST
-	image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	image.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	image.BorderSizePixel = 0
-	image.Size = UDim2.new(0.294797689, 0, 1, 0)
-	image.Image = imageTab
-
-	UICorner.CornerRadius = UDim.new(0, 5)
-	UICorner.Parent = image
-
-	Execute.Name = "Execute"
-	Execute.Parent = LIST
-	Execute.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-	Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	Execute.BorderSizePixel = 0
-	Execute.Position = UDim2.new(0.71965313, 0, 0.545454562, 0)
-	Execute.Size = UDim2.new(0.254335254, 0, 0.327272713, 0)
-	Execute.Font = Enum.Font.SourceSans
-	Execute.Text = "Load Script"
-	Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Execute.TextSize = 20.000
-
-	UICorner_2.CornerRadius = UDim.new(0, 5)
-	UICorner_2.Parent = Execute
-
-	Copy.Name = "Copy"
-	Copy.Parent = LIST
-	Copy.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-	Copy.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	Copy.BorderSizePixel = 0
-	Copy.Position = UDim2.new(0.534682035, 0, 0.545454562, 0)
-	Copy.Size = UDim2.new(0.161849707, 0, 0.327272713, 0)
-	Copy.Font = Enum.Font.SourceSans
-	Copy.Text = "Copy"
-	Copy.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Copy.TextSize = 20.000
-
-	UICorner_3.CornerRadius = UDim.new(0, 5)
-	UICorner_3.Parent = Copy
-
-	Hide.Name = "Hide"
-	Hide.Parent = LIST
-	Hide.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-	Hide.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	Hide.BorderSizePixel = 0
-	Hide.Position = UDim2.new(0.343930632, 0, 0.545454562, 0)
-	Hide.Size = UDim2.new(0.161849707, 0, 0.327272713, 0)
-	Hide.Font = Enum.Font.SourceSans
-	Hide.Text = "Hide"
-	Hide.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Hide.TextSize = 20.000
-
-	UICorner_4.CornerRadius = UDim.new(0, 5)
-	UICorner_4.Parent = Hide
-
-	NameScript.Name = "NameScript"
-	NameScript.Parent = LIST
-	NameScript.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	NameScript.BackgroundTransparency = 1.000
-	NameScript.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	NameScript.BorderSizePixel = 0
-	NameScript.Position = UDim2.new(0.326589584, 0, 0.0727272779, 0)
-	NameScript.Size = UDim2.new(0.578034699, 0, 0.145454541, 0)
-	NameScript.Font = Enum.Font.SourceSans
-	NameScript.Text = "Scriptname"
-	NameScript.TextColor3 = Color3.fromRGB(255, 255, 255)
-	NameScript.TextSize = 20.000
-	NameScript.TextXAlignment = Enum.TextXAlignment.Left
-
-	Credit.Name = "Credit"
-	Credit.Parent = LIST
-	Credit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Credit.BackgroundTransparency = 1.000
-	Credit.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	Credit.BorderSizePixel = 0
-	Credit.Position = UDim2.new(0.326589584, 0, 0.281818211, 0)
-	Credit.Size = UDim2.new(0.630057812, 0, 0.145454541, 0)
-	Credit.Font = Enum.Font.SourceSans
-	Credit.Text = "Credits"
-	Credit.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Credit.TextSize = 20.000
-	Credit.TextXAlignment = Enum.TextXAlignment.Left
-
-	UICorner_5.CornerRadius = UDim.new(0, 5)
-	UICorner_5.Parent = LIST
-
-	local execute = Execute
-	local copy = Copy
-	local hide = Hide
-
-	local scname = NameScript
-	local credit = Credit
-	local img = image
-
-	LIST.Name = scriptname
-	LIST.Parent = scriptFrame
-	LIST.Visible = true
-
-	img.Image = imageTab
-
-	credit.Text = "Uploaded by: "..creator
-	scname.Text = scriptname
-
-
-	execute.MouseButton1Down:Connect(function()
-loadstring(source)()
-	end)
-	copy.MouseButton1Down:Connect(function()
-		warn("soon")
-	end)
-end
-local scriptFrame = game.Players.LocalPlayer.PlayerGui.vysion.main.Frames.scriptfinder.search.ScrollingFrame
-local searchframe = game.Players.LocalPlayer.PlayerGui.vysion.main.Frames.scriptfinder.search.TextBox
-
-local http = game:GetService("HttpService")
-btn.MouseButton1Click:Connect(function()
-	for _, child in ipairs(scriptFrame:GetChildren()) do
-		if child:IsA("Frame") then
-			child:Destroy()
-		end
-	end
-	local url = "https://scriptblox.com/api/script/search?filters=free&q=".. searchframe.Text
-	local response = game:HttpGetAsync(url)
-	local decoded = http:JSONDecode(response)
-	for i, script in pairs(decoded.result.scripts) do
-		if(script.isUniversal == true) then
-			AddTab("rbxassetid://12742166887", "??", script.title, script.script)
-		else
-			AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", "??", script.title, script.script)
-		end
-	end
-
-end)
-end)
-
-
-UICorner_34.CornerRadius = UDim.new(0, 5)
-UICorner_34.Parent = TextButton_5
+UICorner_36.CornerRadius = UDim.new(0, 5)
+UICorner_36.Parent = TextButton_6
 
 TextBox_2.Parent = search
 TextBox_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -835,24 +812,75 @@ TextBox_2.Text = ""
 TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox_2.TextSize = 20.000
 
-UICorner_35.CornerRadius = UDim.new(0, 5)
-UICorner_35.Parent = TextBox_2
+UICorner_37.CornerRadius = UDim.new(0, 5)
+UICorner_37.Parent = TextBox_2
 
 ScrollingFrame_2.Parent = search
 ScrollingFrame_2.Active = true
-ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame_2.BorderSizePixel = 0
-ScrollingFrame_2.Position = UDim2.new(0.0273224041, 0, 1.27083337, 0)
-ScrollingFrame_2.Size = UDim2.new(0.945355177, 0, 4.04166651, 0)
+ScrollingFrame_2.Position = UDim2.new(0.0273225456, 0, 1.27083325, 0)
+ScrollingFrame_2.Size = UDim2.new(0.972677529, 0, 4.04166698, 0)
 ScrollingFrame_2.CanvasSize = UDim2.new(0, 0, 22, 0)
 
-UIListLayout.Parent = ScrollingFrame_2
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 5)
+UIListLayout_2.Parent = ScrollingFrame_2
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 5)
 
-UICorner_36.CornerRadius = UDim.new(0, 5)
-UICorner_36.Parent = search
+Folder.Parent = ScrollingFrame_2
+
+list.Name = "list"
+list.Parent = Folder
+list.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+list.BorderColor3 = Color3.fromRGB(0, 0, 0)
+list.BorderSizePixel = 0
+list.Position = UDim2.new(0.0421037413, 0, -1.5733265e-07, 0)
+list.Size = UDim2.new(0, 341, 0, 100)
+list.Visible = false
+
+UICorner_38.Parent = list
+
+ImageLabel_2.Parent = list
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Size = UDim2.new(0.316715539, 0, 1, 0)
+ImageLabel_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner_39.Parent = ImageLabel_2
+
+load_2.Name = "load"
+load_2.Parent = list
+load_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+load_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+load_2.BorderSizePixel = 0
+load_2.Position = UDim2.new(0.763065815, 0, 0.519999981, 0)
+load_2.Size = UDim2.new(0.217008799, 0, 0.379999995, 0)
+load_2.Font = Enum.Font.SourceSans
+load_2.Text = "Load"
+load_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+load_2.TextSize = 14.000
+
+UICorner_40.Parent = load_2
+
+TextLabel_7.Parent = list
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.ClipsDescendants = true
+TextLabel_7.Position = UDim2.new(0.335777134, 0, 0, 0)
+TextLabel_7.Size = UDim2.new(2.05555558, 0, 0.209999993, 0)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 18.000
+TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_41.Parent = TextLabel_7
+
+UICorner_42.CornerRadius = UDim.new(0, 5)
+UICorner_42.Parent = search
 
 Settings.Name = "Settings"
 Settings.Parent = Frames
@@ -863,30 +891,149 @@ Settings.Position = UDim2.new(8.31541911e-08, 0, -1.72091603e-07, 0)
 Settings.Size = UDim2.new(0.999999821, 0, 0.997333169, 0)
 Settings.Visible = false
 
-UICorner_37.CornerRadius = UDim.new(0, 5)
-UICorner_37.Parent = Settings
+UICorner_43.CornerRadius = UDim.new(0, 5)
+UICorner_43.Parent = Settings
 
-TextLabel_6.Parent = Frames
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_6.BorderSizePixel = 0
-TextLabel_6.Position = UDim2.new(-0.142940313, 0, -0.0966515765, 0)
-TextLabel_6.Size = UDim2.new(0.172913253, 0, 0.0864661336, 0)
-TextLabel_6.Font = Enum.Font.SourceSansBold
-TextLabel_6.Text = "FPS :"
-TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.TextScaled = true
-TextLabel_6.TextSize = 20.000
-TextLabel_6.TextWrapped = true
-TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
+TextButton_7.Parent = Settings
+TextButton_7.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextButton_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.BorderSizePixel = 0
+TextButton_7.Position = UDim2.new(0.225991726, 0, 0.0980216563, 0)
+TextButton_7.Size = UDim2.new(0, 200, 0, 50)
+TextButton_7.Font = Enum.Font.SourceSans
+TextButton_7.Text = "Unlock fps"
+TextButton_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_7.TextSize = 30.000
 
-UITextSizeConstraint_7.Parent = TextLabel_6
+UICorner_44.CornerRadius = UDim.new(0, 5)
+UICorner_44.Parent = TextButton_7
+
+TextButton_8.Parent = Settings
+TextButton_8.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextButton_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_8.BorderSizePixel = 0
+TextButton_8.Position = UDim2.new(0.225991726, 0, 0.309145212, 0)
+TextButton_8.Size = UDim2.new(0, 200, 0, 50)
+TextButton_8.Font = Enum.Font.SourceSans
+TextButton_8.Text = "Anti Client Kick"
+TextButton_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_8.TextSize = 30.000
+
+UICorner_45.CornerRadius = UDim.new(0, 5)
+UICorner_45.Parent = TextButton_8
+
+TextButton_9.Parent = Settings
+TextButton_9.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextButton_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_9.BorderSizePixel = 0
+TextButton_9.Position = UDim2.new(0.225991726, 0, 0.527808905, 0)
+TextButton_9.Size = UDim2.new(0, 200, 0, 50)
+TextButton_9.Font = Enum.Font.SourceSans
+TextButton_9.Text = "Anti Crash"
+TextButton_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_9.TextSize = 30.000
+
+UICorner_46.CornerRadius = UDim.new(0, 5)
+UICorner_46.Parent = TextButton_9
+
+TextButton_10.Parent = Settings
+TextButton_10.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextButton_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_10.BorderSizePixel = 0
+TextButton_10.Position = UDim2.new(0.225991815, 0, 0.735162377, 0)
+TextButton_10.Size = UDim2.new(0, 200, 0, 50)
+TextButton_10.Font = Enum.Font.SourceSans
+TextButton_10.Text = "Destroy Roblox"
+TextButton_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_10.TextSize = 30.000
+
+UICorner_47.CornerRadius = UDim.new(0, 5)
+UICorner_47.Parent = TextButton_10
+
+TextLabel_8.Parent = Frames
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(-0.129326358, 0, -0.100411586, 0)
+TextLabel_8.Size = UDim2.new(0.172913253, 0, 0.0864661336, 0)
+TextLabel_8.Font = Enum.Font.SourceSansBold
+TextLabel_8.Text = "FPS :"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 20.000
+TextLabel_8.TextWrapped = true
+TextLabel_8.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_7.Parent = TextLabel_8
 UITextSizeConstraint_7.MaxTextSize = 20
+
+open.Name = "open"
+open.Parent = vysion
+open.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+open.BorderSizePixel = 0
+open.Position = UDim2.new(0.456128091, 0, 0.0533746518, 0)
+open.Size = UDim2.new(0.100553863, 0, 0.172176331, 0)
+open.Visible = false
+
+ImageButton.Parent = open
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Size = UDim2.new(0.99999994, 0, 1, 0)
+ImageButton.Image = "rbxassetid://14019401561"
+
+UICorner_48.CornerRadius = UDim.new(1, 8)
+UICorner_48.Parent = ImageButton
+
+UICorner_49.CornerRadius = UDim.new(1, 8)
+UICorner_49.Parent = open
+
+background.Name = "background"
+background.Parent = vysion
+background.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+background.BorderSizePixel = 0
+background.Position = UDim2.new(0, 0, -0.136019289, 0)
+background.Size = UDim2.new(1, 0, 1.13601923, 0)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(52, 52, 52)), ColorSequenceKeypoint.new(0.66, Color3.fromRGB(83, 83, 83)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Rotation = 75
+UIGradient.Parent = background
+
+ImageLabel_3.Parent = background
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_3.BackgroundTransparency = 1.000
+ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_3.BorderSizePixel = 0
+ImageLabel_3.Position = UDim2.new(0.387360692, 0, 0.258615762, 0)
+ImageLabel_3.Size = UDim2.new(0.206302226, 0, 0.347483099, 0)
+ImageLabel_3.Image = "rbxassetid://14019401561"
+
+UICorner_50.CornerRadius = UDim.new(1, 5)
+UICorner_50.Parent = ImageLabel_3
+
+TextLabel_9.Parent = background
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.386432022, 0, 0.622933149, 0)
+TextLabel_9.Size = UDim2.new(0.201922342, 0, 0.0782619566, 0)
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.Text = ""
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 40.000
+TextLabel_9.TextWrapped = true
+
+UITextSizeConstraint_8.Parent = TextLabel_9
+UITextSizeConstraint_8.MaxTextSize = 40
 
 -- Scripts:
 
-local function EKXQVSB_fake_script() -- b.LocalScript 
+local function LSPDWQV_fake_script() -- b.LocalScript 
 	local script = Instance.new('LocalScript', b)
 
 	local frames = script.Parent.Parent.Parent.Parent.Frames
@@ -900,8 +1047,8 @@ local function EKXQVSB_fake_script() -- b.LocalScript
 		frames.Settings.Visible = f
 	end)
 end
-coroutine.wrap(EKXQVSB_fake_script)()
-local function AJZXZUH_fake_script() -- b_2.LocalScript 
+coroutine.wrap(LSPDWQV_fake_script)()
+local function EXHQQ_fake_script() -- b_2.LocalScript 
 	local script = Instance.new('LocalScript', b_2)
 
 	local frames = script.Parent.Parent.Parent.Parent.Frames
@@ -915,8 +1062,8 @@ local function AJZXZUH_fake_script() -- b_2.LocalScript
 		frames.Settings.Visible = f
 	end)
 end
-coroutine.wrap(AJZXZUH_fake_script)()
-local function EMYONC_fake_script() -- b_3.LocalScript 
+coroutine.wrap(EXHQQ_fake_script)()
+local function JMZK_fake_script() -- b_3.LocalScript 
 	local script = Instance.new('LocalScript', b_3)
 
 	local frames = script.Parent.Parent.Parent.Parent.Frames
@@ -930,8 +1077,8 @@ local function EMYONC_fake_script() -- b_3.LocalScript
 		frames.Settings.Visible = f
 	end)
 end
-coroutine.wrap(EMYONC_fake_script)()
-local function QAVTEWP_fake_script() -- b_4.LocalScript 
+coroutine.wrap(JMZK_fake_script)()
+local function ASKPGE_fake_script() -- b_4.LocalScript 
 	local script = Instance.new('LocalScript', b_4)
 
 	local frames = script.Parent.Parent.Parent.Parent.Frames
@@ -945,8 +1092,8 @@ local function QAVTEWP_fake_script() -- b_4.LocalScript
 		frames.Settings.Visible = t
 	end)
 end
-coroutine.wrap(QAVTEWP_fake_script)()
-local function ELGNO_fake_script() -- b_5.LocalScript 
+coroutine.wrap(ASKPGE_fake_script)()
+local function GYLC_fake_script() -- b_5.LocalScript 
 	local script = Instance.new('LocalScript', b_5)
 
 	local frames = script.Parent.Parent.Parent.Parent.Frames
@@ -960,24 +1107,30 @@ local function ELGNO_fake_script() -- b_5.LocalScript
 		frames.Settings.Visible = f
 	end)
 end
-coroutine.wrap(ELGNO_fake_script)()
-local function CXHHSM_fake_script() -- Close.LocalScript 
+coroutine.wrap(GYLC_fake_script)()
+local function LSWQKM_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Parent.vysion:Destroy()
+		game:GetService("TweenService"):Create(script.Parent.Parent.Parent.main,TweenInfo.new(2),{Position=UDim2.new(0.279, 0,0.-5, 0)}):Play()
+		wait(0.2)
+		script.Parent.Parent.Parent.main.Visible = false
+		game:GetService("TweenService"):Create(script.Parent.Parent.Parent.open,TweenInfo.new(2),{Position=UDim2.new(0.447, 0,0.029, 0)}):Play()
+		wait(0.2)
+		script.Parent.Parent.Parent.open.Visible = true
 	end)
+	
 end
-coroutine.wrap(CXHHSM_fake_script)()
-local function DLUKHQ_fake_script() -- TextLabel.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel)
+coroutine.wrap(LSWQKM_fake_script)()
+local function KIJKL_fake_script() -- TextLabel_2.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_2)
 
 	local tutuj = script.Parent
 	
 	tutuj.Text = "Welcome: " .. game.Players.LocalPlayer.Name
 end
-coroutine.wrap(DLUKHQ_fake_script)()
-local function YQFV_fake_script() -- welcome.LocalScript 
+coroutine.wrap(KIJKL_fake_script)()
+local function PJVCH_fake_script() -- welcome.LocalScript 
 	local script = Instance.new('LocalScript', welcome)
 
 	--Made by TimmyLikesChez
@@ -992,8 +1145,8 @@ local function YQFV_fake_script() -- welcome.LocalScript
 	
 	script.Parent.ImageLabel.Image = game.Players:GetUserThumbnailAsync(UserId,ThumbType,ThumbSize)
 end
-coroutine.wrap(YQFV_fake_script)()
-local function LUJLSM_fake_script() -- alsDpsg.LocalScript 
+coroutine.wrap(PJVCH_fake_script)()
+local function JTPJLJR_fake_script() -- alsDpsg.LocalScript 
 	local script = Instance.new('LocalScript', alsDpsg)
 
 	local ABC = script.Parent 
@@ -1048,109 +1201,293 @@ local function LUJLSM_fake_script() -- alsDpsg.LocalScript
 	
 	spawn(AnimateBetaText)
 end
-coroutine.wrap(LUJLSM_fake_script)()
-local function RVAONP_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
+coroutine.wrap(JTPJLJR_fake_script)()
+local function TXDRGW_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		local lkg = script.Parent.Parent.Parent.execute.TextBox
 		loadstring(lkg.Text)()
 	end)
 end
-coroutine.wrap(RVAONP_fake_script)()
-local function IYDIYU_fake_script() -- TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_2)
+coroutine.wrap(TXDRGW_fake_script)()
+local function ZKICDY_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		script.Parent.Parent.Parent.execute.TextBox.Text = ""
 	end)
 end
-coroutine.wrap(IYDIYU_fake_script)()
-local function VBLPK_fake_script() -- TextButton_3.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_3)
+coroutine.wrap(ZKICDY_fake_script)()
+local function QTPBWU_fake_script() -- TextButton_4.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_4)
 
 	script.Parent.MouseButton1Down:Connect(function()
 	loadstring(getclipboard())()
 	end)
 end
-coroutine.wrap(VBLPK_fake_script)()
-local function OCTPEIA_fake_script() -- TextButton_4.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_4)
+coroutine.wrap(QTPBWU_fake_script)()
+local function ESCJAFC_fake_script() -- TextButton_5.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_5)
 
-	local function addScript(scriptNameText, scriptCodeText)
-		-- Create a new script button
-	makefolder("Syctro")
-	writefile("Syctro/" .. scriptNameText, scriptCodeText)
-		local scriptButton = Instance.new("TextButton")
-		local lol = Instance.new("ImageButton")
-		scriptButton.Name = "script_" .. scriptNameText
-		scriptButton.Parent = script.Parent.Parent.Parent.Parent.Parent.scripts.ScrollingFrame
-		scriptButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-		scriptButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		scriptButton.BorderSizePixel = 0
-		scriptButton.Size = UDim2.new(0, 161, 0, 37)
-		scriptButton.Font = Enum.Font.SourceSans
-		scriptButton.Text = scriptNameText
-		scriptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-		scriptButton.TextSize = 20
-		lol.Name = "lol"
-		lol.Parent = scriptButton
-		lol.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-		lol.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		lol.BorderSizePixel = 0
-		lol.Position = UDim2.new(0.826086938, 0, 0.135136366, 0)
-		lol.Size = UDim2.new(0, 21, 0, 20)
-		lol.Image = "rbxassetid://14005807149"
-		lol.MouseButton1Down:Connect(function()
-			delfile("Syctro/"..scriptNameText)
-			scriptButton:Destroy()
-		end)
-		scriptButton.MouseButton1Down:Connect(function()
-			loadstring(scriptCodeText)()
-		end)
+	local btn = script.Parent
 	
+	local function AddScript(name, source)
+		makefolder("Vysion")
+		writefile("Vysion/" .. name, source)
+	
+		local parent = script.Parent.Parent.Parent.Parent.Parent.scripts.ScrollingFrame
+		local hub = script.Parent.Parent.Parent.Parent.Parent.scripts.ScrollingFrame.List.newhubs
+		local newhub = hub:Clone()
+	
+		local scriptname = newhub.TextLabel
+		local execbutton = newhub.load
+		local delbutton = newhub.TextButton
+	
+		newhub.Parent = parent
+		newhub.Visible = true
+		scriptname.Text = "script.txt"
+		execbutton.MouseButton1Click:Connect(function()
+			loadstring(source)()
+		end)
+		delbutton.MouseButton1Click:Connect(function()
+			newhub:Destroy()
+			delfile("Vysion/"..name)
+		end)
 	end
 	
-	
-	
-	
-	
-	
-	-- Add a click event to the "Add Script!" button
-	script.Parent.MouseButton1Down:Connect(function()
-		local scriptNameText = script.Parent.Parent.name.Text
-		local scriptCodeText = script.Parent.Parent.code.Text
-	
-		if scriptNameText ~= "" and scriptCodeText ~= "" then
-			addScript(scriptNameText, scriptCodeText)
-			script.Parent.Parent.Name.Text.Text = "" -- Clear the script name input field
-			script.Parent.Parent.code.Text.Text = "" -- Clear the script code input field
-		end
-	end)
-	
-	for _, file in ipairs(listfiles("Syctro")) do
+	for _, file in ipairs(listfiles("Vysion")) do
 		AddScript(file:sub(22, #file), readfile(file), true)
 	end
 	
-	
-	
-	
-	
-end
-coroutine.wrap(OCTPEIA_fake_script)()
-local function YWMHPXU_fake_script() -- TextButton_5.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_5)
-
-	script.Parent.MouseButton1Down:Connect(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/l/main/lol'))()
+	btn.MouseButton1Click:Connect(function()
+		AddScript(script.Parent.Parent.sname.Text, script.Parent.Parent.code.Text, false)
+		script.Parent.Parent.code.Text = ""
+		script.Parent.Parent.sname.Text = ""
 	end)
 end
-coroutine.wrap(YWMHPXU_fake_script)()
-local function XFJS_fake_script() -- main.LocalScript 
+coroutine.wrap(ESCJAFC_fake_script)()
+local function NUJMX_fake_script() -- TextButton_6.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_6)
+
+	local btn = script.Parent
+	
+	local function AddTab(imageTab, scriptname, source)
+		local scriptFrame = script.Parent.Parent.ScrollingFrame
+		local newList = scriptFrame.Folder.list:Clone()
+	
+		local execute = newList.load
+	
+		local scname = newList.TextLabel
+		local img = newList.ImageLabel
+	
+		newList.Name = scriptname
+		newList.Parent = scriptFrame
+		newList.Visible = true
+	
+		img.Image = imageTab
+	
+		scname.Text = scriptname
+	
+		execute.MouseButton1Click:Connect(function()
+			loadstring(source)()
+		end)
+	end
+	
+	
+	local http = game:GetService("HttpService")
+	btn.MouseButton1Click:Connect(function()
+		for _, child in ipairs(script.Parent.Parent.ScrollingFrame:GetChildren()) do
+			if child:IsA("Frame") then
+				child:Destroy()
+			end
+		end
+	
+	
+		local url = "https://scriptblox.com/api/script/search?filters=free&q="..script.Parent.Parent.TextBox.Text
+		local response = game:HttpGetAsync(url)
+		local decoded = http:JSONDecode(response)
+		for _, script in pairs(decoded.result.scripts) do
+			if(script.isUniversal == true) then
+				AddTab("rbxassetid://14019401561", script.title, script.script)
+			else
+				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
+			end
+	
+		end
+	
+	end)
+	
+	
+end
+coroutine.wrap(NUJMX_fake_script)()
+local function JCKFXXG_fake_script() -- TextButton_7.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_7)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		setfpscap(10000)
+	end)
+end
+coroutine.wrap(JCKFXXG_fake_script)()
+local function THLHGAO_fake_script() -- TextButton_8.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_8)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	local Players = game:GetService("Players")
+	local Player = Players.LocalPlayer
+	local OldNameCall 
+	OldNameCall = hookmetamethod(game, "__namecall", function(...) 
+	local Self, Args = (...), ({select(2, ...)})
+	if getnamecallmethod() == "Kick" and Self == Player then 
+	return
+	end
+	return OldNameCall(...)
+	end)
+	end)
+end
+coroutine.wrap(THLHGAO_fake_script)()
+local function MKTJQZC_fake_script() -- TextButton_9.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_9)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	function GetLocalPlayer()
+	for i,v in pairs(game:GetChildren()) do
+	if v.ClassName == "Players" then
+	Players = v
+	player = v.LocalPlayer
+	name = v.LocalPlayer.Name	
+	end
+	end
+	end
+	GetLocalPlayer()
+	function AntiCrash()
+	GetLocalPlayer()
+	print("anya AntiCrash loaded")
+	Players.LocalPlayer.Backpack.ChildAdded:Connect(function(instance)
+	if instance.ClassName == "HopperBin" or instance.ClassName == "Tool" then
+	Players.LocalPlayer.Backpack:Destroy()
+	for i,v in pairs(Players.LocalPlayer.Backpack:GetChildren()) do
+	if v.ClassName == "HopperBin" or v.ClassName == "Tool" then v:Destroy() end
+	end
+	print(instance.Name .. " got destroyed from BACKPACK")
+	end
+	end)
+	Players.LocalPlayer.StarterGear.ChildAdded:Connect(function(instance)
+	if instance.ClassName == "HopperBin" or instance.ClassName == "Tool" then
+	Players.LocalPlayer.StarterGear:Destroy()
+	for i,v in pairs(Players.LocalPlayer.StarterGear:GetChildren()) do
+	if v.ClassName == "HopperBin" or v.ClassName == "Tool" then v:Destroy() end
+	end
+	print(instance.Name .. " got destroyed from STARTERGEAR")
+	end
+	end)
+	c = Instance.new("BoolValue",player) c.Name = "P?" c.Value = true
+	a = (player.Character)
+	a.ChildAdded:Connect(function(instance)
+	if instance.ClassName == "HopperBin" or instance.ClassName == "Tool" or instance.ClassName == "SkateboardPlatform" then
+	a:Destroy()
+	for i,v in pairs(workspace(name):GetChildren()) do
+	if v.ClassName == "HopperBin" or v.ClassName == "Tool" or v.ClassName == "SkateboardPlatform" then v:Destroy() end
+	end
+	print(instance.Name .. " got destroyed from CHARACTER")
+	elseif instance.ClassName == "SkateboardPlatform" then
+	a:Destroy()
+	print(instance.Name .. " got deleted. Someone tried to KICK!")
+	end
+	end)
+	end
+	Players.LocalPlayer.Changed:Connect(function()
+	GetLocalPlayer()
+	AntiCrash()
+	end)
+	Players.LocalPlayer.Character.Changed:Connect(function()
+	GetLocalPlayer()
+	AntiCrash()
+	end)
+	Players.LocalPlayer.CharacterAdded:Connect(function()
+	GetLocalPlayer()
+	AntiCrash()
+	end)
+	Players.LocalPlayer.Character.Humanoid.Died:connect(function()
+	GetLocalPlayer()
+	AntiCrash()
+	end)
+	AntiCrash()
+	end)
+end
+coroutine.wrap(MKTJQZC_fake_script)()
+local function YNQBRNH_fake_script() -- TextButton_10.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_10)
+
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	game:Shutdown()
+	end)
+end
+coroutine.wrap(YNQBRNH_fake_script)()
+local function DAXMYD_fake_script() -- main.LocalScript 
 	local script = Instance.new('LocalScript', main)
 
 	script.Parent.Draggable = true
 	script.Parent.Active = true
 end
-coroutine.wrap(XFJS_fake_script)()
+coroutine.wrap(DAXMYD_fake_script)()
+local function AKIIKH_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
 
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent.Parent.main,TweenInfo.new(2),{Position=UDim2.new(0.279, 0,0.26, 0)}):Play()
+		wait(1)
+		script.Parent.Parent.Parent.main.Visible = true
+		game:GetService("TweenService"):Create(script.Parent.Parent.Parent.open,TweenInfo.new(2),{Position=UDim2.new(0.456, 0,0.-5, 0)}):Play()
+		wait(1)
+		script.Parent.Parent.Parent.open.Visible = false
+	end)
+	
+end
+coroutine.wrap(AKIIKH_fake_script)()
+local function BVVUN_fake_script() -- vysion.LocalScript 
+	local script = Instance.new('LocalScript', vysion)
+
+	--[[
+	    made by: dak#1111
+	    thanks for using!
+	--]]
+	local background = script.Parent.background
+	
+	local status = background.TextLabel
+	
+	local ImageLabel = background.ImageLabel
+	local function tween(...)
+		game:GetService("TweenService"):Create(...):Play()
+	end
+	
+	game:GetService("ReplicatedFirst"):RemoveDefaultLoadingScreen()
+	if syn then syn.protect_gui(loading) end
+	
+	repeat wait() until game:GetService("Players").LocalPlayer
+	status.Text = "loading"
+	wait(0.5)
+	status.Text = "loading."
+	wait(0.5)
+	status.Text = "loading.."
+	wait(1)
+	status.Text = "loading..."
+	wait(2)
+	status.Text = "Have Fun"
+	if not game:IsLoaded() then
+		game.Loaded:wait()
+	end
+	
+	wait(3.66)
+	
+	tween(background, TweenInfo.new(3.55), {BackgroundTransparency = 1})
+	tween(status, TweenInfo.new(3.55), {TextTransparency = 1, TextStrokeTransparency = 1})
+	tween(ImageLabel, TweenInfo.new(3.55), {ImageTransparency = 1})
+	
+	wait(3.55)
+	background:Destroy()
+	
+	script.Parent.open.Visible = true
+end
+coroutine.wrap(BVVUN_fake_script)()
