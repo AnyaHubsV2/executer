@@ -136,7 +136,7 @@ local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
 --Properties:
 
 vysion.Name = "vysion"
-vysion.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+vysion.Parent = game.CoreGui
 vysion.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 main.Name = "main"
