@@ -708,15 +708,15 @@ UICorner_25.Parent = ImageButton
 
 -- Scripts:
 
-local function ZEUEWX_fake_script() -- run.LocalScript 
+local function ICPR_fake_script() -- run.LocalScript 
 	local script = Instance.new('LocalScript', run)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(getclipboard())
 	end)
 end
-coroutine.wrap(ZEUEWX_fake_script)()
-local function XXWJ_fake_script() -- back.LocalScript 
+coroutine.wrap(ICPR_fake_script)()
+local function FXTQKOR_fake_script() -- back.LocalScript 
 	local script = Instance.new('LocalScript', back)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -726,16 +726,16 @@ local function XXWJ_fake_script() -- back.LocalScript
 	end)
 	
 end
-coroutine.wrap(XXWJ_fake_script)()
-local function TZCFG_fake_script() -- Loadeditor.LocalScript 
+coroutine.wrap(FXTQKOR_fake_script)()
+local function NIEI_fake_script() -- Loadeditor.LocalScript 
 	local script = Instance.new('LocalScript', Loadeditor)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.executorframe.text1.Text = getclipboard()
 	end)
 end
-coroutine.wrap(TZCFG_fake_script)()
-local function FRLR_fake_script() -- Execute.LocalScript 
+coroutine.wrap(NIEI_fake_script)()
+local function XGCIHQU_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local executeframe = script.Parent.Parent.Parent.executebutton.executorframe
@@ -744,8 +744,8 @@ local function FRLR_fake_script() -- Execute.LocalScript
 			loadstring(executeframe.text1.Text)() 
 	end)
 end
-coroutine.wrap(FRLR_fake_script)()
-local function UNDHB_fake_script() -- Clear.LocalScript 
+coroutine.wrap(XGCIHQU_fake_script)()
+local function SYBGR_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local executeframe = script.Parent.Parent.Parent.executebutton.executorframe
@@ -754,8 +754,8 @@ local function UNDHB_fake_script() -- Clear.LocalScript
 		executeframe.text1.Text = ""
 	end)
 end
-coroutine.wrap(UNDHB_fake_script)()
-local function CQCKWV_fake_script() -- plus.LocalScript 
+coroutine.wrap(SYBGR_fake_script)()
+local function LZGB_fake_script() -- plus.LocalScript 
 	local script = Instance.new('LocalScript', plus)
 
 	local btn = script.Parent
@@ -788,15 +788,10 @@ local function CQCKWV_fake_script() -- plus.LocalScript
 		AddScript(script.Parent.Parent.sname.Text, script.Parent.Parent.code.Text, false)
 		script.Parent.Parent.code.Text = ""
 		script.Parent.Parent.sname.Text = ""
-	end)
-	
-	for _, file in ipairs(listfiles("fluxsus")) do
-		AddScript(file:sub(1, #file), readfile(file), true)
-	end
-	
+	end)	
 end
-coroutine.wrap(CQCKWV_fake_script)()
-local function IOGP_fake_script() -- back_2.LocalScript 
+coroutine.wrap(LZGB_fake_script)()
+local function IGZXD_fake_script() -- back_2.LocalScript 
 	local script = Instance.new('LocalScript', back_2)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -805,8 +800,8 @@ local function IOGP_fake_script() -- back_2.LocalScript
 		script.Parent.Parent.Parent.Parent.Parent.main.Transparency = 1
 	end)
 end
-coroutine.wrap(IOGP_fake_script)()
-local function ZCPOB_fake_script() -- Executor.LocalScript 
+coroutine.wrap(IGZXD_fake_script)()
+local function GFYUQX_fake_script() -- Executor.LocalScript 
 	local script = Instance.new('LocalScript', Executor)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -816,8 +811,8 @@ local function ZCPOB_fake_script() -- Executor.LocalScript
 	
 	end)
 end
-coroutine.wrap(ZCPOB_fake_script)()
-local function HDAM_fake_script() -- Console.LocalScript 
+coroutine.wrap(GFYUQX_fake_script)()
+local function DMERJN_fake_script() -- Console.LocalScript 
 	local script = Instance.new('LocalScript', Console)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -826,8 +821,8 @@ local function HDAM_fake_script() -- Console.LocalScript
 		script.Parent.Parent.Parent.Parent.Parent.main.Transparency = 0.6
 	end)
 end
-coroutine.wrap(HDAM_fake_script)()
-local function PFZRX_fake_script() -- Cloud.LocalScript 
+coroutine.wrap(DMERJN_fake_script)()
+local function LQPPZ_fake_script() -- Cloud.LocalScript 
 	local script = Instance.new('LocalScript', Cloud)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -836,8 +831,8 @@ local function PFZRX_fake_script() -- Cloud.LocalScript
 		script.Parent.Parent.Parent.Parent.Parent.main.Transparency = 0.6
 	end)
 end
-coroutine.wrap(PFZRX_fake_script)()
-local function XSJXQZ_fake_script() -- close.LocalScript 
+coroutine.wrap(LQPPZ_fake_script)()
+local function YIUYHUL_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -851,8 +846,8 @@ local function XSJXQZ_fake_script() -- close.LocalScript
 	game:GetService("TweenService"):Create(maim,TweenInfo.new(2),{Position=UDim2.new(-5,0,0,0)}):Play()
 	end)
 end
-coroutine.wrap(XSJXQZ_fake_script)()
-local function SPBUMDR_fake_script() -- back_3.LocalScript 
+coroutine.wrap(YIUYHUL_fake_script)()
+local function EYNE_fake_script() -- back_3.LocalScript 
 	local script = Instance.new('LocalScript', back_3)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -861,8 +856,8 @@ local function SPBUMDR_fake_script() -- back_3.LocalScript
 		script.Parent.Parent.Parent.Parent.Parent.main.Transparency = 1
 	end)
 end
-coroutine.wrap(SPBUMDR_fake_script)()
-local function ENVS_fake_script() -- Clear_3.LocalScript 
+coroutine.wrap(EYNE_fake_script)()
+local function FIOL_fake_script() -- Clear_3.LocalScript 
 	local script = Instance.new('LocalScript', Clear_3)
 
 	local btn = script.Parent
@@ -916,8 +911,8 @@ local function ENVS_fake_script() -- Clear_3.LocalScript
 	
 	
 end
-coroutine.wrap(ENVS_fake_script)()
-local function UWXDTVO_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(FIOL_fake_script)()
+local function OCOAJQ_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -928,8 +923,8 @@ local function UWXDTVO_fake_script() -- ImageButton.LocalScript
 		game:GetService("TweenService"):Create(maim,TweenInfo.new(0.8),{Position=UDim2.new(0,0,0,0)}):Play()
 	end)
 end
-coroutine.wrap(UWXDTVO_fake_script)()
-local function QJPDRZ_fake_script() -- Newfluxsos.LocalScript 
+coroutine.wrap(OCOAJQ_fake_script)()
+local function KUUPKPY_fake_script() -- Newfluxsos.LocalScript 
 	local script = Instance.new('LocalScript', Newfluxsos)
 
 	--[[
@@ -991,7 +986,6 @@ local function QJPDRZ_fake_script() -- Newfluxsos.LocalScript
 	status.TextStrokeColor3 = Color3.fromRGB(52, 52, 52)
 	status.TextStrokeTransparency = 0.000
 	status.TextWrapped = true
-	if syn then syn.protect_gui(loading) end
 	
 	repeat wait() until game:GetService("Players").LocalPlayer
 	status.Text = "AnyaDev on top"
@@ -1009,8 +1003,12 @@ local function QJPDRZ_fake_script() -- Newfluxsos.LocalScript
 	tween(status, TweenInfo.new(3.55), {TextTransparency = 1, TextStrokeTransparency = 1})
 	tween(ImageLabel, TweenInfo.new(3.55), {ImageTransparency = 1})
 	
-	wait(5.55)
+	wait(2.55)
 	loading:Destroy()
 	script.Parent.open.Visible = true
 end
-coroutine.wrap(QJPDRZ_fake_script)()
+coroutine.wrap(KUUPKPY_fake_script)()
+
+for _, file in ipairs(listfiles("fluxsus")) do
+	AddScript(file:sub(1, #file), readfile(file), true)
+end
