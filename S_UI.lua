@@ -1404,9 +1404,9 @@ coroutine.wrap(GXJR_fake_script)()
 local function XECT_fake_script() -- vysion.LocalScript 
 	local script = Instance.new('LocalScript', vysion)
 wait(2)
-	game.CoreGui.RobloxGui.Enabled = true
-	game.CoreGui.TopBarApp.Enabled = true
-	game.CoreGui.PlayerList.Enabled = true
+	game.CoreGui.RobloxGui.Enabled = false
+	game.CoreGui.TopBarApp.Enabled = false
+	game.CoreGui.PlayerList.Enabled = false
 	local background = script.Parent.background
 	
 	local status = background.TextLabel
@@ -1439,6 +1439,9 @@ wait(2)
 	
 	wait(3.55)
 	background:Destroy()
+	game.CoreGui.RobloxGui.Enabled = true
+	game.CoreGui.TopBarApp.Enabled = true
+	game.CoreGui.PlayerList.Enabled = true
 	
 	script.Parent.open.Visible = true
 end
