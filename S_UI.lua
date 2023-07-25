@@ -925,6 +925,7 @@ open.Name = "open"
 open.Parent = vysion
 open.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+open.LayoutOrder = 99
 open.BorderSizePixel = 0
 open.Position = UDim2.new(0.456128091, 0, 0.0533746518, 0)
 open.Size = UDim2.new(0.100553863, 0, 0.172176331, 0)
@@ -1403,9 +1404,9 @@ coroutine.wrap(GXJR_fake_script)()
 local function XECT_fake_script() -- vysion.LocalScript 
 	local script = Instance.new('LocalScript', vysion)
 wait(2)
-	game.CoreGui.RobloxGui.Enabled = false
-	game.CoreGui.TopBarApp.Enabled = false
-	game.CoreGui.PlayerList.Enabled = false
+	game.CoreGui.RobloxGui.Enabled = true
+	game.CoreGui.TopBarApp.Enabled = true
+	game.CoreGui.PlayerList.Enabled = true
 	local background = script.Parent.background
 	
 	local status = background.TextLabel
