@@ -947,6 +947,7 @@ background.Name = "background"
 background.Parent = vysion
 background.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+background.LayoutOrder = 999
 background.BorderSizePixel = 0
 background.Position = UDim2.new(0, 0, -0.136019289, 0)
 background.Size = UDim2.new(1, 0, 1.13601923, 0)
@@ -1401,7 +1402,7 @@ end
 coroutine.wrap(GXJR_fake_script)()
 local function XECT_fake_script() -- vysion.LocalScript 
 	local script = Instance.new('LocalScript', vysion)
-
+wait(2)
 	game.CoreGui.RobloxGui.Enabled = false
 	game.CoreGui.TopBarApp.Enabled = false
 	game.CoreGui.PlayerList.Enabled = false
@@ -1436,9 +1437,6 @@ local function XECT_fake_script() -- vysion.LocalScript
 	tween(ImageLabel, TweenInfo.new(3.55), {ImageTransparency = 1})
 	
 	wait(3.55)
-	game.CoreGui.RobloxGui.Enabled = true
-	game.CoreGui.TopBarApp.Enabled = true
-	game.CoreGui.PlayerList.Enabled = true
 	background:Destroy()
 	
 	script.Parent.open.Visible = true
