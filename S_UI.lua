@@ -126,13 +126,6 @@ local open = Instance.new("Frame")
 local ImageButton = Instance.new("ImageButton")
 local UICorner_48 = Instance.new("UICorner")
 local UICorner_49 = Instance.new("UICorner")
-local background = Instance.new("Frame")
-local UIGradient = Instance.new("UIGradient")
-local ImageLabel_3 = Instance.new("ImageLabel")
-local UICorner_50 = Instance.new("UICorner")
-local TextLabel_9 = Instance.new("TextLabel")
-local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
-
 --Properties:
 
 vysion.Name = "vysion"
@@ -929,7 +922,6 @@ open.LayoutOrder = 99
 open.BorderSizePixel = 0
 open.Position = UDim2.new(0.456128091, 0, 0.0533746518, 0)
 open.Size = UDim2.new(0.100553863, 0, 0.172176331, 0)
-open.Visible = false
 
 ImageButton.Parent = open
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -943,48 +935,6 @@ UICorner_48.Parent = ImageButton
 
 UICorner_49.CornerRadius = UDim.new(1, 8)
 UICorner_49.Parent = open
-
-background.Name = "background"
-background.Parent = vysion
-background.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-background.BorderColor3 = Color3.fromRGB(0, 0, 0)
-background.LayoutOrder = 999
-background.BorderSizePixel = 0
-background.Position = UDim2.new(0, 0, -0.136019289, 0)
-background.Size = UDim2.new(1, 0, 1.13601923, 0)
-
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(52, 52, 52)), ColorSequenceKeypoint.new(0.66, Color3.fromRGB(83, 83, 83)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient.Rotation = 75
-UIGradient.Parent = background
-
-ImageLabel_3.Parent = background
-ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_3.BackgroundTransparency = 1.000
-ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_3.BorderSizePixel = 0
-ImageLabel_3.Position = UDim2.new(0.387360692, 0, 0.258615762, 0)
-ImageLabel_3.Size = UDim2.new(0.206302226, 0, 0.347483099, 0)
-ImageLabel_3.Image = "rbxassetid://14019401561"
-
-UICorner_50.CornerRadius = UDim.new(1, 5)
-UICorner_50.Parent = ImageLabel_3
-
-TextLabel_9.Parent = background
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BackgroundTransparency = 1.000
-TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_9.BorderSizePixel = 0
-TextLabel_9.Position = UDim2.new(0.386432022, 0, 0.622933149, 0)
-TextLabel_9.Size = UDim2.new(0.201922342, 0, 0.0782619566, 0)
-TextLabel_9.Font = Enum.Font.SourceSans
-TextLabel_9.Text = ""
-TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.TextScaled = true
-TextLabel_9.TextSize = 40.000
-TextLabel_9.TextWrapped = true
-
-UITextSizeConstraint_8.Parent = TextLabel_9
-UITextSizeConstraint_8.MaxTextSize = 40
 
 -- Scripts:
 
@@ -1398,51 +1348,5 @@ local function GXJR_fake_script() -- ImageButton.LocalScript
 		wait(1)
 		script.Parent.Parent.Parent.open.Visible = false
 	end)
-	
 end
 coroutine.wrap(GXJR_fake_script)()
-local function XECT_fake_script() -- vysion.LocalScript 
-	local script = Instance.new('LocalScript', vysion)
-wait(2)
-	game.CoreGui.RobloxGui.Enabled = false
-	game.CoreGui.TopBarApp.Enabled = false
-	game.CoreGui.PlayerList.Enabled = false
-	local background = script.Parent.background
-	
-	local status = background.TextLabel
-	
-	local ImageLabel = background.ImageLabel
-	local function tween(...)
-		game:GetService("TweenService"):Create(...):Play()
-	end
-	
-	game:GetService("ReplicatedFirst"):RemoveDefaultLoadingScreen()
-	repeat wait() until game:GetService("Players").LocalPlayer
-	status.Text = "loading"
-	wait(0.5)
-	status.Text = "loading."
-	wait(0.5)
-	status.Text = "loading.."
-	wait(1)
-	status.Text = "loading..."
-	wait(2)
-	status.Text = "Have Fun"
-	if not game:IsLoaded() then
-		game.Loaded:wait()
-	end
-	
-	wait(3.66)
-	
-	tween(background, TweenInfo.new(3.55), {BackgroundTransparency = 1})
-	tween(status, TweenInfo.new(3.55), {TextTransparency = 1, TextStrokeTransparency = 1})
-	tween(ImageLabel, TweenInfo.new(3.55), {ImageTransparency = 1})
-	
-	wait(3.55)
-	background:Destroy()
-	game.CoreGui.RobloxGui.Enabled = true
-	game.CoreGui.TopBarApp.Enabled = true
-	game.CoreGui.PlayerList.Enabled = true
-	
-	script.Parent.open.Visible = true
-end
-coroutine.wrap(XECT_fake_script)()
