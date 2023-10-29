@@ -149,6 +149,7 @@ open.BorderColor3 = Color3.fromRGB(0, 0, 0)
 open.BorderSizePixel = 0
 open.Position = UDim2.new(0.497626036, 0, 0.0198675506, 0)
 open.Size = UDim2.new(0, 28, 0, 27)
+open.Zindex = 9999999999999999999
 open.Image = "rbxassetid://15115110089"
 
 MAIN.Name = "MAIN"
