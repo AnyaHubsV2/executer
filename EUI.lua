@@ -149,7 +149,7 @@ open.BorderColor3 = Color3.fromRGB(0, 0, 0)
 open.BorderSizePixel = 0
 open.Position = UDim2.new(0.397626036, 0, 0.0098675506, 0)
 open.Size = UDim2.new(0, 28, 0, 27)
-open.Image = "rbxassetid://15115110089"
+open.Image = "rbxassetid://15204016915"
 
 MAIN.Name = "MAIN"
 MAIN.Parent = EVONUI
@@ -241,7 +241,7 @@ gg9.BorderColor3 = Color3.fromRGB(0, 0, 0)
 gg9.BorderSizePixel = 0
 gg9.Position = UDim2.new(0.0104062436, 0, 0.120971441, 0)
 gg9.Size = UDim2.new(0.0322866961, 0, 0.635999918, 0)
-gg9.Image = "rbxassetid://15115110089"
+gg9.Image = "rbxassetid://15204016915"
 
 TextLabel.Parent = topbar
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1853,7 +1853,7 @@ local function LTSXAE_fake_script() -- EVONUI.LocalScript
 				ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				ImageLabel.BorderSizePixel = 0
 				ImageLabel.Size = UDim2.new(1, 0, 0.66842103, 0)
-				ImageLabel.Image = "rbxassetid://15115110089"
+				ImageLabel.Image = "rbxassetid://15204016915"
 				ImageLabel.ImageTransparency = 0.400
 	
 				UICorner_2.Parent = ImageLabel
