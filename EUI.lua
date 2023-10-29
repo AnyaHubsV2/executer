@@ -147,9 +147,9 @@ open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 open.BackgroundTransparency = 0.990
 open.BorderColor3 = Color3.fromRGB(0, 0, 0)
 open.BorderSizePixel = 0
-open.Position = UDim2.new(0.497626036, 0, 0.0198675506, 0)
+open.Position = UDim2.new(0.397626036, 0, 0.0098675506, 0)
 open.Size = UDim2.new(0, 28, 0, 27)
-open.Zindex = 9999999999999999999
+open.Zindex = 999
 open.Image = "rbxassetid://15115110089"
 
 MAIN.Name = "MAIN"
