@@ -1,1224 +1,1394 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local EVONUI = Instance.new("ScreenGui")
-local open = Instance.new("ImageButton")
-local MAIN = Instance.new("Frame")
-local topbar = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local scriptsbutton = Instance.new("TextButton")
-local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-local executorbutton = Instance.new("TextButton")
-local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
-local settingsbutton = Instance.new("TextButton")
-local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
-local close = Instance.new("ImageButton")
-local gg9 = Instance.new("ImageLabel")
-local TextLabel = Instance.new("TextLabel")
-local frames = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local executor = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local buttons = Instance.new("Frame")
-local execute = Instance.new("Frame")
-local TextButton = Instance.new("TextButton")
-local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
-local ImageLabel = Instance.new("ImageLabel")
-local UIGridLayout = Instance.new("UIGridLayout")
-local clear = Instance.new("Frame")
-local TextButton_2 = Instance.new("TextButton")
-local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
-local ImageLabel_2 = Instance.new("ImageLabel")
-local copy = Instance.new("Frame")
-local TextButton_3 = Instance.new("TextButton")
-local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
-local ImageLabel_3 = Instance.new("ImageLabel")
-local txtbox = Instance.new("Frame")
-local EditorFrame = Instance.new("ScrollingFrame")
-local Source = Instance.new("TextBox")
-local Comments_ = Instance.new("TextLabel")
-local Globals_ = Instance.new("TextLabel")
-local Keywords_ = Instance.new("TextLabel")
-local RemoteHighlight_ = Instance.new("TextLabel")
-local Strings_ = Instance.new("TextLabel")
-local Tokens_ = Instance.new("TextLabel")
-local Numbers_ = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local Frame = Instance.new("Frame")
-local UICorner_4 = Instance.new("UICorner")
-local scripts = Instance.new("Frame")
-local UICorner_5 = Instance.new("UICorner")
-local TextLabel_3 = Instance.new("TextLabel")
-local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
-local scripts_2 = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
-local search = Instance.new("Frame")
-local UICorner_7 = Instance.new("UICorner")
-local TextLabel_4 = Instance.new("TextLabel")
-local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
-local TextBox = Instance.new("TextBox")
-local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
-local ImageButton = Instance.new("ImageButton")
-local Frame_2 = Instance.new("Frame")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local UIGridLayout_2 = Instance.new("UIGridLayout")
-local Folder = Instance.new("Folder")
-local Frame_3 = Instance.new("Frame")
-local UICorner_8 = Instance.new("UICorner")
-local ImageLabel_4 = Instance.new("ImageLabel")
-local UICorner_9 = Instance.new("UICorner")
-local gg9_2 = Instance.new("ImageButton")
-local UICorner_10 = Instance.new("UICorner")
-local TextLabel_5 = Instance.new("TextLabel")
-local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
-local Frame_4 = Instance.new("Frame")
-local UICorner_11 = Instance.new("UICorner")
-local ImageLabel_5 = Instance.new("ImageLabel")
-local UICorner_12 = Instance.new("UICorner")
-local gg9_3 = Instance.new("ImageButton")
-local UICorner_13 = Instance.new("UICorner")
-local TextLabel_6 = Instance.new("TextLabel")
-local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
-local settings = Instance.new("Frame")
-local UICorner_14 = Instance.new("UICorner")
-local language = Instance.new("Frame")
-local lol = Instance.new("TextLabel")
-local UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
-local Frame_5 = Instance.new("Frame")
-local English = Instance.new("TextButton")
-local UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
-local Chinese = Instance.new("TextButton")
-local UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
-local Spanish = Instance.new("TextButton")
-local UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint")
-local Arabic = Instance.new("TextButton")
-local UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint")
-local Hindi = Instance.new("TextButton")
-local UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint")
-local French = Instance.new("TextButton")
-local UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint")
-local Russian = Instance.new("TextButton")
-local UITextSizeConstraint_19 = Instance.new("UITextSizeConstraint")
-local Bengali = Instance.new("TextButton")
-local UITextSizeConstraint_20 = Instance.new("UITextSizeConstraint")
-local Portuguese = Instance.new("TextButton")
-local UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint")
-local German = Instance.new("TextButton")
-local UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint")
-local Japanese = Instance.new("TextButton")
-local UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint")
-local Korean = Instance.new("TextButton")
-local UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint")
-local Swahili = Instance.new("TextButton")
-local UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint")
-local Marathi = Instance.new("TextButton")
-local UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint")
-local Turkish = Instance.new("TextButton")
-local UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint")
-local gg9_4 = Instance.new("Frame")
-local color = Instance.new("Frame")
-local Frame_6 = Instance.new("Frame")
-local Frame_7 = Instance.new("Frame")
-local UICorner_15 = Instance.new("UICorner")
-local ColorWheel = Instance.new("ImageButton")
-local Cursor = Instance.new("ImageLabel")
-local ValueSelector = Instance.new("TextButton")
-local UIGradient = Instance.new("UIGradient")
-local Cursor_2 = Instance.new("Frame")
-local gg9_5 = Instance.new("Frame")
-local lol2 = Instance.new("TextButton")
-local UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint")
-local lol_2 = Instance.new("TextLabel")
-local UITextSizeConstraint_29 = Instance.new("UITextSizeConstraint")
-local gg9_6 = Instance.new("ImageLabel")
-local UICorner_16 = Instance.new("UICorner")
-
---Properties:
-
-EVONUI.Name = "EVONUI"
-EVONUI.Parent = game.CoreGui
-EVONUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-open.Name = "open"
-open.Parent = EVONUI
-open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-open.BackgroundTransparency = 0.990
-open.BorderColor3 = Color3.fromRGB(0, 0, 0)
-open.BorderSizePixel = 0
-open.Position = UDim2.new(0.397626036, 0, 0.0098675506, 0)
-open.Size = UDim2.new(0, 28, 0, 27)
-open.Image = "rbxassetid://15204016915"
-
-MAIN.Name = "MAIN"
-MAIN.Parent = EVONUI
-MAIN.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-MAIN.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MAIN.BorderSizePixel = 0
-MAIN.Position = UDim2.new(0.222000003, 0, 5, 0)
-MAIN.Size = UDim2.new(0.556062818, 0, 0.538079441, 0)
-
-topbar.Name = "topbar"
-topbar.Parent = MAIN
-topbar.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-topbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-topbar.BorderSizePixel = 0
-topbar.Position = UDim2.new(0, 0, 0.0092309108, 0)
-topbar.Size = UDim2.new(1, 0, 0.102354087, 0)
-
-UICorner.CornerRadius = UDim.new(0, 5)
-UICorner.Parent = topbar
-
-scriptsbutton.Name = "scriptsbutton"
-scriptsbutton.Parent = topbar
-scriptsbutton.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-scriptsbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-scriptsbutton.BorderSizePixel = 0
-scriptsbutton.Position = UDim2.new(0.462372869, 0, 0.0909090936, 0)
-scriptsbutton.Size = UDim2.new(0.0738916248, 0, 0.848484874, 0)
-scriptsbutton.Font = Enum.Font.Unknown
-scriptsbutton.Text = "Scripts"
-scriptsbutton.TextColor3 = Color3.fromRGB(132, 131, 132)
-scriptsbutton.TextScaled = true
-scriptsbutton.TextSize = 20.000
-scriptsbutton.TextWrapped = true
-
-UITextSizeConstraint.Parent = scriptsbutton
-UITextSizeConstraint.MaxTextSize = 25
-
-executorbutton.Name = "executorbutton"
-executorbutton.Parent = topbar
-executorbutton.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-executorbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-executorbutton.BorderSizePixel = 0
-executorbutton.Position = UDim2.new(0.348586708, 0, 0.0909090936, 0)
-executorbutton.Size = UDim2.new(0.0738916248, 0, 0.848484874, 0)
-executorbutton.Font = Enum.Font.Unknown
-executorbutton.Text = "Executor"
-executorbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
-executorbutton.TextScaled = true
-executorbutton.TextSize = 25.000
-executorbutton.TextStrokeTransparency = 0.000
-executorbutton.TextWrapped = true
-
-UITextSizeConstraint_2.Parent = executorbutton
-UITextSizeConstraint_2.MaxTextSize = 22
-
-settingsbutton.Name = "settingsbutton"
-settingsbutton.Parent = topbar
-settingsbutton.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-settingsbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-settingsbutton.BorderSizePixel = 0
-settingsbutton.Position = UDim2.new(0.572471201, 0, 0.0909090936, 0)
-settingsbutton.Size = UDim2.new(0.0738916248, 0, 0.848484874, 0)
-settingsbutton.Font = Enum.Font.Unknown
-settingsbutton.Text = "Settings"
-settingsbutton.TextColor3 = Color3.fromRGB(132, 131, 132)
-settingsbutton.TextScaled = true
-settingsbutton.TextSize = 25.000
-settingsbutton.TextWrapped = true
-
-UITextSizeConstraint_3.Parent = settingsbutton
-UITextSizeConstraint_3.MaxTextSize = 22
-
-close.Name = "close"
-close.Parent = topbar
-close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-close.BackgroundTransparency = 1.000
-close.BorderColor3 = Color3.fromRGB(0, 0, 0)
-close.BorderSizePixel = 0
-close.Position = UDim2.new(0.952440381, 0, 0.0909090936, 0)
-close.Size = UDim2.new(0.0410509035, 0, 0.727272749, 0)
-close.Image = "rbxassetid://15115278951"
-close.ScaleType = Enum.ScaleType.Fit
-
-gg9.Name = "gg9"
-gg9.Parent = topbar
-gg9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-gg9.BackgroundTransparency = 1.000
-gg9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-gg9.BorderSizePixel = 0
-gg9.Position = UDim2.new(0.0104062436, 0, 0.120971441, 0)
-gg9.Size = UDim2.new(0.0322866961, 0, 0.635999918, 0)
-gg9.Image = "rbxassetid://15204016915"
-
-TextLabel.Parent = topbar
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.049261082, 0, 0.120970979, 0)
-TextLabel.Size = UDim2.new(0, 76, 0, 20)
-TextLabel.Font = Enum.Font.Unknown
-TextLabel.Text = "I Evon I V2"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 30.000
-
-frames.Name = "frames"
-frames.Parent = MAIN
-frames.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-frames.BorderColor3 = Color3.fromRGB(0, 0, 0)
-frames.BorderSizePixel = 0
-frames.Position = UDim2.new(0, 0, 0.109634586, 0)
-frames.Size = UDim2.new(1, 0, 0.889230847, 0)
-
-UICorner_2.Parent = frames
-
-executor.Name = "executor"
-executor.Parent = frames
-executor.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-executor.BorderColor3 = Color3.fromRGB(0, 0, 0)
-executor.BorderSizePixel = 0
-executor.Position = UDim2.new(0, 0, -0.00230580242, 0)
-executor.Size = UDim2.new(1, 0, 1.00346017, 0)
-
-UICorner_3.Parent = executor
-
-buttons.Name = "buttons"
-buttons.Parent = executor
-buttons.BackgroundColor3 = Color3.fromRGB(25, 24, 26)
-buttons.BorderColor3 = Color3.fromRGB(0, 0, 0)
-buttons.BorderSizePixel = 0
-buttons.Position = UDim2.new(0.0104062436, 0, 0.00142559188, 0)
-buttons.Size = UDim2.new(0.990148008, 0, 0.0905830786, 0)
-
-execute.Name = "execute"
-execute.Parent = buttons
-execute.BackgroundColor3 = Color3.fromRGB(25, 24, 26)
-execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
-execute.BorderSizePixel = 0
-execute.Position = UDim2.new(0, 0, 0.0500000007, 0)
-execute.Size = UDim2.new(0.107973419, 0, 0.949999988, 0)
-
-TextButton.Parent = execute
-TextButton.BackgroundColor3 = Color3.fromRGB(25, 24, 26)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.302963495, 0, 0.0466758311, 0)
-TextButton.Size = UDim2.new(0, 45, 0, 18)
-TextButton.Font = Enum.Font.Unknown
-TextButton.Text = "Execute"
-TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.TextScaled = true
-TextButton.TextSize = 22.000
-TextButton.TextStrokeTransparency = 0.000
-TextButton.TextWrapped = true
-
-UITextSizeConstraint_4.Parent = TextButton
-UITextSizeConstraint_4.MaxTextSize = 22
-
-ImageLabel.Parent = execute
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0, 0, -8.03094167e-07, 0)
-ImageLabel.Size = UDim2.new(0, 19, 0, 19)
-ImageLabel.Image = "rbxassetid://15115194626"
-
-UIGridLayout.Parent = buttons
-UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout.CellPadding = UDim2.new(0, 15, 0, 5)
-UIGridLayout.CellSize = UDim2.new(0, 65, 0, 19)
-
-clear.Name = "clear"
-clear.Parent = buttons
-clear.BackgroundColor3 = Color3.fromRGB(25, 24, 26)
-clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
-clear.BorderSizePixel = 0
-clear.Position = UDim2.new(0, 0, 0.0500000007, 0)
-clear.Size = UDim2.new(0.107973419, 0, 0.949999988, 0)
-
-TextButton_2.Parent = clear
-TextButton_2.BackgroundColor3 = Color3.fromRGB(25, 24, 26)
-TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(0.302963495, 0, 0.0466758311, 0)
-TextButton_2.Size = UDim2.new(0, 45, 0, 18)
-TextButton_2.Font = Enum.Font.Unknown
-TextButton_2.Text = "Clear"
-TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.TextScaled = true
-TextButton_2.TextSize = 22.000
-TextButton_2.TextStrokeTransparency = 0.000
-TextButton_2.TextWrapped = true
-
-UITextSizeConstraint_5.Parent = TextButton_2
-UITextSizeConstraint_5.MaxTextSize = 22
-
-ImageLabel_2.Parent = clear
-ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_2.BackgroundTransparency = 1.000
-ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_2.BorderSizePixel = 0
-ImageLabel_2.Position = UDim2.new(0, 0, -8.03094167e-07, 0)
-ImageLabel_2.Size = UDim2.new(0, 19, 0, 19)
-ImageLabel_2.Image = "rbxassetid://15115285389"
-
-copy.Name = "copy"
-copy.Parent = buttons
-copy.BackgroundColor3 = Color3.fromRGB(25, 24, 26)
-copy.BorderColor3 = Color3.fromRGB(0, 0, 0)
-copy.BorderSizePixel = 0
-copy.Position = UDim2.new(0, 0, 0.0500000007, 0)
-copy.Size = UDim2.new(0.107973419, 0, 0.949999988, 0)
-
-TextButton_3.Parent = copy
-TextButton_3.BackgroundColor3 = Color3.fromRGB(25, 24, 26)
-TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_3.BorderSizePixel = 0
-TextButton_3.Position = UDim2.new(0.302963495, 0, 0.0466758311, 0)
-TextButton_3.Size = UDim2.new(0, 45, 0, 19)
-TextButton_3.Font = Enum.Font.Unknown
-TextButton_3.Text = "Copy"
-TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_3.TextScaled = true
-TextButton_3.TextSize = 22.000
-TextButton_3.TextStrokeTransparency = 0.000
-TextButton_3.TextWrapped = true
-
-UITextSizeConstraint_6.Parent = TextButton_3
-UITextSizeConstraint_6.MaxTextSize = 22
-
-ImageLabel_3.Parent = copy
-ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_3.BackgroundTransparency = 1.000
-ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_3.BorderSizePixel = 0
-ImageLabel_3.Position = UDim2.new(0, 0, -8.03094167e-07, 0)
-ImageLabel_3.Size = UDim2.new(0.292307705, 0, 1, 0)
-ImageLabel_3.Image = "rbxassetid://15115286653"
-
-txtbox.Name = "txtbox"
-txtbox.Parent = executor
-txtbox.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-txtbox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-txtbox.BorderSizePixel = 0
-txtbox.Position = UDim2.new(0.00712217111, 0, 0.186206892, 0)
-txtbox.Size = UDim2.new(0.985221684, 0, 0.789655149, 0)
-
-EditorFrame.Name = "EditorFrame"
-EditorFrame.Parent = txtbox
-EditorFrame.BackgroundColor3 = Color3.fromRGB(31, 30, 31)
-EditorFrame.BackgroundTransparency = 1.000
-EditorFrame.BorderColor3 = Color3.fromRGB(61, 61, 61)
-EditorFrame.Position = UDim2.new(0.00333333341, 0, 0.0262008738, 0)
-EditorFrame.Size = UDim2.new(0.99666667, 0, 0.973799109, 0)
-EditorFrame.BottomImage = "rbxassetid://148970562"
-EditorFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
-EditorFrame.MidImage = "rbxassetid://148970562"
-EditorFrame.ScrollBarThickness = 15
-EditorFrame.TopImage = "rbxassetid://148970562"
-EditorFrame.VerticalScrollBarInset = Enum.ScrollBarInset.Always
-
-Source.Name = "Source"
-Source.Parent = EditorFrame
-Source.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Source.BackgroundTransparency = 1.000
-Source.ClipsDescendants = true
-Source.Position = UDim2.new(0.109447107, 0, 1.99896803e-07, 0)
-Source.Size = UDim2.new(0.77700001, 0, 2, 0)
-Source.ZIndex = 3
-Source.ClearTextOnFocus = false
-Source.Font = Enum.Font.Code
-Source.MultiLine = true
-Source.PlaceholderColor3 = Color3.fromRGB(204, 204, 204)
-Source.PlaceholderText = "Welcome To Evon"
-Source.Text = ""
-Source.TextColor3 = Color3.fromRGB(255, 255, 255)
-Source.TextSize = 15.000
-Source.TextXAlignment = Enum.TextXAlignment.Left
-Source.TextYAlignment = Enum.TextYAlignment.Top
-
-Comments_.Name = "Comments_"
-Comments_.Parent = Source
-Comments_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Comments_.BackgroundTransparency = 1.000
-Comments_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
-Comments_.Size = UDim2.new(1, 0, 0.999999881, 0)
-Comments_.ZIndex = 5
-Comments_.Font = Enum.Font.Code
-Comments_.Text = ""
-Comments_.TextColor3 = Color3.fromRGB(59, 200, 59)
-Comments_.TextSize = 15.000
-Comments_.TextXAlignment = Enum.TextXAlignment.Left
-Comments_.TextYAlignment = Enum.TextYAlignment.Top
-
-Globals_.Name = "Globals_"
-Globals_.Parent = Source
-Globals_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Globals_.BackgroundTransparency = 1.000
-Globals_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
-Globals_.Size = UDim2.new(1, 0, 0.999999881, 0)
-Globals_.ZIndex = 5
-Globals_.Font = Enum.Font.Code
-Globals_.Text = ""
-Globals_.TextColor3 = Color3.fromRGB(132, 214, 247)
-Globals_.TextSize = 15.000
-Globals_.TextXAlignment = Enum.TextXAlignment.Left
-Globals_.TextYAlignment = Enum.TextYAlignment.Top
-
-Keywords_.Name = "Keywords_"
-Keywords_.Parent = Source
-Keywords_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Keywords_.BackgroundTransparency = 1.000
-Keywords_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
-Keywords_.Size = UDim2.new(1, 0, 0.999999881, 0)
-Keywords_.ZIndex = 5
-Keywords_.Font = Enum.Font.Code
-Keywords_.Text = ""
-Keywords_.TextColor3 = Color3.fromRGB(248, 109, 124)
-Keywords_.TextSize = 15.000
-Keywords_.TextXAlignment = Enum.TextXAlignment.Left
-Keywords_.TextYAlignment = Enum.TextYAlignment.Top
-
-RemoteHighlight_.Name = "RemoteHighlight_"
-RemoteHighlight_.Parent = Source
-RemoteHighlight_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RemoteHighlight_.BackgroundTransparency = 1.000
-RemoteHighlight_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
-RemoteHighlight_.Size = UDim2.new(1, 0, 0.999999881, 0)
-RemoteHighlight_.ZIndex = 5
-RemoteHighlight_.Font = Enum.Font.Code
-RemoteHighlight_.Text = ""
-RemoteHighlight_.TextColor3 = Color3.fromRGB(0, 144, 255)
-RemoteHighlight_.TextSize = 15.000
-RemoteHighlight_.TextXAlignment = Enum.TextXAlignment.Left
-RemoteHighlight_.TextYAlignment = Enum.TextYAlignment.Top
-
-Strings_.Name = "Strings_"
-Strings_.Parent = Source
-Strings_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Strings_.BackgroundTransparency = 1.000
-Strings_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
-Strings_.Size = UDim2.new(1, 0, 0.999999881, 0)
-Strings_.ZIndex = 5
-Strings_.Font = Enum.Font.Code
-Strings_.Text = ""
-Strings_.TextColor3 = Color3.fromRGB(173, 241, 149)
-Strings_.TextSize = 15.000
-Strings_.TextXAlignment = Enum.TextXAlignment.Left
-Strings_.TextYAlignment = Enum.TextYAlignment.Top
-
-Tokens_.Name = "Tokens_"
-Tokens_.Parent = Source
-Tokens_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tokens_.BackgroundTransparency = 1.000
-Tokens_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
-Tokens_.Size = UDim2.new(1, 0, 0.999999881, 0)
-Tokens_.ZIndex = 5
-Tokens_.Font = Enum.Font.Code
-Tokens_.Text = ""
-Tokens_.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tokens_.TextSize = 15.000
-Tokens_.TextXAlignment = Enum.TextXAlignment.Left
-Tokens_.TextYAlignment = Enum.TextYAlignment.Top
-
-Numbers_.Name = "Numbers_"
-Numbers_.Parent = Source
-Numbers_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Numbers_.BackgroundTransparency = 1.000
-Numbers_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
-Numbers_.Size = UDim2.new(1, 0, 0.999999881, 0)
-Numbers_.ZIndex = 4
-Numbers_.Font = Enum.Font.Code
-Numbers_.Text = ""
-Numbers_.TextColor3 = Color3.fromRGB(255, 198, 0)
-Numbers_.TextSize = 15.000
-Numbers_.TextXAlignment = Enum.TextXAlignment.Left
-Numbers_.TextYAlignment = Enum.TextYAlignment.Top
-
-TextLabel_2.Parent = EditorFrame
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(31, 30, 31)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.000646353699, 0, 0, 0)
-TextLabel_2.Size = UDim2.new(0.101999998, 0, 2, 0)
-TextLabel_2.Font = Enum.Font.Code
-TextLabel_2.Text = "1"
-TextLabel_2.TextColor3 = Color3.fromRGB(157, 155, 157)
-TextLabel_2.TextSize = 15.000
-TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
-
-Frame.Parent = EditorFrame
-Frame.BackgroundColor3 = Color3.fromRGB(31, 30, 31)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.884607434, 0, -0.00362486183, 0)
-Frame.Size = UDim2.new(0.118000001, 0, 2, 0)
-
-UICorner_4.Parent = EditorFrame
-
-scripts.Name = "scripts"
-scripts.Parent = executor
-scripts.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-scripts.BorderColor3 = Color3.fromRGB(0, 0, 0)
-scripts.BorderSizePixel = 0
-scripts.Position = UDim2.new(0.0104062436, 0, 0.112698361, 0)
-scripts.Size = UDim2.new(0.986863732, 0, 0.0941981897, 0)
-
-UICorner_5.CornerRadius = UDim.new(0, 5)
-UICorner_5.Parent = scripts
-
-TextLabel_3.Parent = scripts
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(-0.010544735, 0, -0.146426424, 0)
-TextLabel_3.Size = UDim2.new(1.01387227, 0, 1, 0)
-TextLabel_3.Font = Enum.Font.Unknown
-TextLabel_3.Text = "Owner: Sakpot  I  Powered By FLuxus!  I  UI: Anya_DEV"
-TextLabel_3.TextColor3 = Color3.fromRGB(255, 252, 255)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 25.000
-TextLabel_3.TextTransparency = 0.400
-TextLabel_3.TextWrapped = true
-
-UITextSizeConstraint_7.Parent = TextLabel_3
-UITextSizeConstraint_7.MaxTextSize = 25
-
-scripts_2.Name = "scripts"
-scripts_2.Parent = frames
-scripts_2.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-scripts_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-scripts_2.BorderSizePixel = 0
-scripts_2.Position = UDim2.new(0, 0, -0.00230580242, 0)
-scripts_2.Size = UDim2.new(1, 0, 1.00346017, 0)
-scripts_2.Visible = false
-
-UICorner_6.Parent = scripts_2
-
-search.Name = "search"
-search.Parent = scripts_2
-search.BackgroundColor3 = Color3.fromRGB(25, 24, 26)
-search.BorderColor3 = Color3.fromRGB(0, 0, 0)
-search.BorderSizePixel = 0
-search.Position = UDim2.new(0.0104062436, 0, 0.00142559188, 0)
-search.Size = UDim2.new(0.988505721, 0, 0.068965517, 0)
-
-UICorner_7.CornerRadius = UDim.new(0, 5)
-UICorner_7.Parent = search
-
-TextLabel_4.Parent = search
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Size = UDim2.new(0.28737542, 0, 1, 0)
-TextLabel_4.Font = Enum.Font.Unknown
-TextLabel_4.Text = "scripts provided by scriptblox.com"
-TextLabel_4.TextColor3 = Color3.fromRGB(132, 131, 132)
-TextLabel_4.TextScaled = true
-TextLabel_4.TextSize = 22.000
-TextLabel_4.TextWrapped = true
-
-UITextSizeConstraint_8.Parent = TextLabel_4
-UITextSizeConstraint_8.MaxTextSize = 22
-
-TextBox.Parent = search
-TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.BackgroundTransparency = 1.000
-TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.BorderSizePixel = 0
-TextBox.ClipsDescendants = true
-TextBox.Position = UDim2.new(0.754152834, 0, 0.0126480106, 0)
-TextBox.Size = UDim2.new(0.196013287, 0, 0.949999988, 0)
-TextBox.Font = Enum.Font.Unknown
-TextBox.PlaceholderText = "type game name!"
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.TextScaled = true
-TextBox.TextSize = 20.000
-TextBox.TextWrapped = true
-TextBox.TextXAlignment = Enum.TextXAlignment.Left
-
-UITextSizeConstraint_9.Parent = TextBox
-UITextSizeConstraint_9.MaxTextSize = 20
-
-ImageButton.Parent = search
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.BackgroundTransparency = 1.000
-ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(0.957971394, 0, 0.0696990937, 0)
-ImageButton.Size = UDim2.new(0.0249169432, 0, 0.75, 0)
-ImageButton.Image = "rbxassetid://15115310494"
-
-Frame_2.Parent = search
-Frame_2.BackgroundColor3 = Color3.fromRGB(159, 159, 159)
-Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_2.BorderSizePixel = 0
-Frame_2.Position = UDim2.new(0.754000008, 0, 0.939999998, 0)
-Frame_2.Size = UDim2.new(0.196013287, 0, 0.0500000007, 0)
-
-ScrollingFrame.Parent = scripts_2
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(0.00900002941, 0, 0.109241351, 0)
-ScrollingFrame.Size = UDim2.new(0.975369453, 0, 0.84827584, 0)
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 5, 0)
-ScrollingFrame.ScrollBarThickness = 9
-
-UIGridLayout_2.Parent = ScrollingFrame
-UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout_2.CellPadding = UDim2.new(0, 10, 0, 5)
-UIGridLayout_2.CellSize = UDim2.new(0, 190, 0, 190)
-
-Folder.Parent = ScrollingFrame
-
-Frame_3.Parent = Folder
-Frame_3.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_3.BorderSizePixel = 0
-Frame_3.Size = UDim2.new(0, 100, 0, 100)
-Frame_3.Visible = false
-
-UICorner_8.Parent = Frame_3
-
-ImageLabel_4.Parent = Frame_3
-ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_4.BackgroundTransparency = 1.000
-ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_4.BorderSizePixel = 0
-ImageLabel_4.Size = UDim2.new(1, 0, 0.66842103, 0)
-ImageLabel_4.Image = "rbxassetid://15117873611"
-ImageLabel_4.ImageTransparency = 0.400
-
-UICorner_9.Parent = ImageLabel_4
-
-gg9_2.Name = "gg9"
-gg9_2.Parent = Frame_3
-gg9_2.BackgroundColor3 = Color3.fromRGB(150, 2, 255)
-gg9_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-gg9_2.BorderSizePixel = 0
-gg9_2.Position = UDim2.new(0.792603195, 0, 0.578947365, 0)
-gg9_2.Size = UDim2.new(0.163157895, 0, 0.157894731, 0)
-gg9_2.Image = "rbxassetid://15115194626"
-gg9_2.SliceScale = 0.000
-
-UICorner_10.Parent = gg9_2
-
-TextLabel_5.Parent = Frame_3
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_5.BorderSizePixel = 0
-TextLabel_5.ClipsDescendants = true
-TextLabel_5.Position = UDim2.new(0.00640114211, 0, 0.66842103, 0)
-TextLabel_5.Size = UDim2.new(0.652631581, 0, 0.105263159, 0)
-TextLabel_5.Font = Enum.Font.Unknown
-TextLabel_5.Text = "Evon Hub BLux Fruit"
-TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.TextScaled = true
-TextLabel_5.TextSize = 20.000
-TextLabel_5.TextWrapped = true
-TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
-
-UITextSizeConstraint_10.Parent = TextLabel_5
-UITextSizeConstraint_10.MaxTextSize = 20
-
-Frame_4.Parent = ScrollingFrame
-Frame_4.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_4.BorderSizePixel = 0
-Frame_4.Size = UDim2.new(0, 100, 0, 100)
-
-UICorner_11.Parent = Frame_4
-
-ImageLabel_5.Parent = Frame_4
-ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_5.BackgroundTransparency = 1.000
-ImageLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_5.BorderSizePixel = 0
-ImageLabel_5.Size = UDim2.new(1, 0, 0.66842103, 0)
-ImageLabel_5.Image = "rbxassetid://15117873611"
-ImageLabel_5.ImageTransparency = 0.400
-
-UICorner_12.Parent = ImageLabel_5
-
-gg9_3.Name = "gg9"
-gg9_3.Parent = Frame_4
-gg9_3.BackgroundColor3 = Color3.fromRGB(150, 2, 255)
-gg9_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-gg9_3.BorderSizePixel = 0
-gg9_3.Position = UDim2.new(0.792603195, 0, 0.578947365, 0)
-gg9_3.Size = UDim2.new(0.163157895, 0, 0.157894731, 0)
-gg9_3.Image = "rbxassetid://15115194626"
-gg9_3.SliceScale = 0.000
-
-UICorner_13.Parent = gg9_3
-
-TextLabel_6.Parent = Frame_4
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_6.BorderSizePixel = 0
-TextLabel_6.ClipsDescendants = true
-TextLabel_6.Position = UDim2.new(0.00640114211, 0, 0.66842103, 0)
-TextLabel_6.Size = UDim2.new(0.652631581, 0, 0.105263159, 0)
-TextLabel_6.Font = Enum.Font.Unknown
-TextLabel_6.Text = "Evon Hub BLux Fruit"
-TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.TextScaled = true
-TextLabel_6.TextSize = 20.000
-TextLabel_6.TextWrapped = true
-TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
-
-UITextSizeConstraint_11.Parent = TextLabel_6
-UITextSizeConstraint_11.MaxTextSize = 20
-
-settings.Name = "settings"
-settings.Parent = frames
-settings.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
-settings.BorderSizePixel = 0
-settings.Position = UDim2.new(0, 0, -0.00230580242, 0)
-settings.Size = UDim2.new(1, 0, 1.00346017, 0)
-settings.Visible = false
-
-UICorner_14.Parent = settings
-
-language.Name = "language"
-language.Parent = settings
-language.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-language.BorderColor3 = Color3.fromRGB(0, 0, 0)
-language.BorderSizePixel = 0
-language.Position = UDim2.new(0.615763545, 0, 0.0344827585, 0)
-language.Size = UDim2.new(0.33661741, 0, 0.927586198, 0)
-
-lol.Name = "lol"
-lol.Parent = language
-lol.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-lol.BackgroundTransparency = 1.000
-lol.BorderColor3 = Color3.fromRGB(0, 0, 0)
-lol.BorderSizePixel = 0
-lol.ClipsDescendants = true
-lol.Position = UDim2.new(0, 0, -0.0007240267, 0)
-lol.Size = UDim2.new(0.995121956, 0, 0.0743494406, 0)
-lol.Font = Enum.Font.Unknown
-lol.Text = "Executor Language"
-lol.TextColor3 = Color3.fromRGB(255, 255, 255)
-lol.TextScaled = true
-lol.TextSize = 20.000
-lol.TextWrapped = true
-
-UITextSizeConstraint_12.Parent = lol
-UITextSizeConstraint_12.MaxTextSize = 20
-
-Frame_5.Parent = language
-Frame_5.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_5.BorderSizePixel = 0
-Frame_5.Position = UDim2.new(0.238098443, 0, 0.101973973, 0)
-Frame_5.Size = UDim2.new(0.517999172, 0, 0.836431205, 0)
-
-English.Name = "English"
-English.Parent = Frame_5
-English.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-English.BorderColor3 = Color3.fromRGB(0, 0, 0)
-English.BorderSizePixel = 0
-English.Position = UDim2.new(0.0457347706, 0, 0.0323605686, 0)
-English.Size = UDim2.new(0.407702744, 0, 0.0914294124, 0)
-English.Font = Enum.Font.Unknown
-English.Text = "English"
-English.TextColor3 = Color3.fromRGB(255, 255, 255)
-English.TextScaled = true
-English.TextSize = 30.000
-English.TextStrokeTransparency = 0.000
-English.TextWrapped = true
-
-UITextSizeConstraint_13.Parent = English
-UITextSizeConstraint_13.MaxTextSize = 20
-
-Chinese.Name = "Chinese"
-Chinese.Parent = Frame_5
-Chinese.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Chinese.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Chinese.BorderSizePixel = 0
-Chinese.Position = UDim2.new(0.554850101, 0, 0.692684174, 0)
-Chinese.Size = UDim2.new(0.407481015, 0, 0.0914294422, 0)
-Chinese.Font = Enum.Font.Unknown
-Chinese.Text = "Chinese"
-Chinese.TextColor3 = Color3.fromRGB(255, 255, 255)
-Chinese.TextScaled = true
-Chinese.TextSize = 30.000
-Chinese.TextStrokeTransparency = 0.000
-Chinese.TextWrapped = true
-
-UITextSizeConstraint_14.Parent = Chinese
-UITextSizeConstraint_14.MaxTextSize = 20
-
-Spanish.Name = "Spanish"
-Spanish.Parent = Frame_5
-Spanish.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Spanish.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Spanish.BorderSizePixel = 0
-Spanish.Position = UDim2.new(0.554850101, 0, 0.296490073, 0)
-Spanish.Size = UDim2.new(0.407481015, 0, 0.0914294422, 0)
-Spanish.Font = Enum.Font.Unknown
-Spanish.Text = "Spanish"
-Spanish.TextColor3 = Color3.fromRGB(255, 255, 255)
-Spanish.TextScaled = true
-Spanish.TextSize = 30.000
-Spanish.TextStrokeTransparency = 0.000
-Spanish.TextWrapped = true
-
-UITextSizeConstraint_15.Parent = Spanish
-UITextSizeConstraint_15.MaxTextSize = 20
-
-Arabic.Name = "Arabic"
-Arabic.Parent = Frame_5
-Arabic.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Arabic.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Arabic.BorderSizePixel = 0
-Arabic.Position = UDim2.new(0.0387070067, 0, 0.16442512, 0)
-Arabic.Size = UDim2.new(0.407481015, 0, 0.0914294124, 0)
-Arabic.Font = Enum.Font.Unknown
-Arabic.Text = "Arabic"
-Arabic.TextColor3 = Color3.fromRGB(255, 255, 255)
-Arabic.TextScaled = true
-Arabic.TextSize = 30.000
-Arabic.TextStrokeTransparency = 0.000
-Arabic.TextWrapped = true
-
-UITextSizeConstraint_16.Parent = Arabic
-UITextSizeConstraint_16.MaxTextSize = 20
-
-Hindi.Name = "Hindi"
-Hindi.Parent = Frame_5
-Hindi.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Hindi.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Hindi.BorderSizePixel = 0
-Hindi.Position = UDim2.new(0.554850101, 0, 0.418395728, 0)
-Hindi.Size = UDim2.new(0.407481015, 0, 0.0914294422, 0)
-Hindi.Font = Enum.Font.Unknown
-Hindi.Text = "Hindi"
-Hindi.TextColor3 = Color3.fromRGB(255, 255, 255)
-Hindi.TextScaled = true
-Hindi.TextSize = 30.000
-Hindi.TextStrokeTransparency = 0.000
-Hindi.TextWrapped = true
-
-UITextSizeConstraint_17.Parent = Hindi
-UITextSizeConstraint_17.MaxTextSize = 20
-
-French.Name = "French"
-French.Parent = Frame_5
-French.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-French.BorderColor3 = Color3.fromRGB(0, 0, 0)
-French.BorderSizePixel = 0
-French.Position = UDim2.new(0.0387070067, 0, 0.692684174, 0)
-French.Size = UDim2.new(0.407481015, 0, 0.0914294422, 0)
-French.Font = Enum.Font.Unknown
-French.Text = "French"
-French.TextColor3 = Color3.fromRGB(255, 255, 255)
-French.TextScaled = true
-French.TextSize = 30.000
-French.TextStrokeTransparency = 0.000
-French.TextWrapped = true
-
-UITextSizeConstraint_18.Parent = French
-UITextSizeConstraint_18.MaxTextSize = 20
-
-Russian.Name = "Russian"
-Russian.Parent = Frame_5
-Russian.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Russian.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Russian.BorderSizePixel = 0
-Russian.Position = UDim2.new(0.0477625728, 0, 0.834907472, 0)
-Russian.Size = UDim2.new(0.407480955, 0, 0.0914294422, 0)
-Russian.Font = Enum.Font.Unknown
-Russian.Text = "Russian"
-Russian.TextColor3 = Color3.fromRGB(255, 255, 255)
-Russian.TextScaled = true
-Russian.TextSize = 30.000
-Russian.TextStrokeTransparency = 0.000
-Russian.TextWrapped = true
-
-UITextSizeConstraint_19.Parent = Russian
-UITextSizeConstraint_19.MaxTextSize = 20
-
-Bengali.Name = "Bengali"
-Bengali.Parent = Frame_5
-Bengali.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Bengali.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Bengali.BorderSizePixel = 0
-Bengali.Position = UDim2.new(0.554850101, 0, 0.555539846, 0)
-Bengali.Size = UDim2.new(0.407481015, 0, 0.0914294422, 0)
-Bengali.Font = Enum.Font.Unknown
-Bengali.Text = "Bengali"
-Bengali.TextColor3 = Color3.fromRGB(255, 255, 255)
-Bengali.TextScaled = true
-Bengali.TextSize = 30.000
-Bengali.TextStrokeTransparency = 0.000
-Bengali.TextWrapped = true
-
-UITextSizeConstraint_20.Parent = Bengali
-UITextSizeConstraint_20.MaxTextSize = 20
-
-Portuguese.Name = "Portuguese"
-Portuguese.Parent = Frame_5
-Portuguese.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Portuguese.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Portuguese.BorderSizePixel = 0
-Portuguese.Position = UDim2.new(0.554850101, 0, 0.16442512, 0)
-Portuguese.Size = UDim2.new(0.407481015, 0, 0.0914294124, 0)
-Portuguese.Font = Enum.Font.Unknown
-Portuguese.Text = "Portuguese"
-Portuguese.TextColor3 = Color3.fromRGB(255, 255, 255)
-Portuguese.TextScaled = true
-Portuguese.TextSize = 30.000
-Portuguese.TextStrokeTransparency = 0.000
-Portuguese.TextWrapped = true
-
-UITextSizeConstraint_21.Parent = Portuguese
-UITextSizeConstraint_21.MaxTextSize = 14
-
-German.Name = "German"
-German.Parent = Frame_5
-German.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-German.BorderColor3 = Color3.fromRGB(0, 0, 0)
-German.BorderSizePixel = 0
-German.Position = UDim2.new(0.0477625728, 0, 0.418395728, 0)
-German.Size = UDim2.new(0.407480955, 0, 0.0914294422, 0)
-German.Font = Enum.Font.Unknown
-German.Text = "German"
-German.TextColor3 = Color3.fromRGB(255, 255, 255)
-German.TextScaled = true
-German.TextSize = 30.000
-German.TextStrokeTransparency = 0.000
-German.TextWrapped = true
-
-UITextSizeConstraint_22.Parent = German
-UITextSizeConstraint_22.MaxTextSize = 20
-
-Japanese.Name = "Japanese"
-Japanese.Parent = Frame_5
-Japanese.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Japanese.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Japanese.BorderSizePixel = 0
-Japanese.Position = UDim2.new(0.0387070067, 0, 0.555539846, 0)
-Japanese.Size = UDim2.new(0.407481015, 0, 0.0914294422, 0)
-Japanese.Font = Enum.Font.Unknown
-Japanese.Text = "Japanese"
-Japanese.TextColor3 = Color3.fromRGB(255, 255, 255)
-Japanese.TextScaled = true
-Japanese.TextSize = 30.000
-Japanese.TextStrokeTransparency = 0.000
-Japanese.TextWrapped = true
-
-UITextSizeConstraint_23.Parent = Japanese
-UITextSizeConstraint_23.MaxTextSize = 20
-
-Korean.Name = "Korean"
-Korean.Parent = Frame_5
-Korean.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Korean.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Korean.BorderSizePixel = 0
-Korean.Position = UDim2.new(0.0387070067, 0, 0.296490073, 0)
-Korean.Size = UDim2.new(0.407481015, 0, 0.0914294422, 0)
-Korean.Font = Enum.Font.Unknown
-Korean.Text = "Korean"
-Korean.TextColor3 = Color3.fromRGB(255, 255, 255)
-Korean.TextScaled = true
-Korean.TextSize = 30.000
-Korean.TextStrokeTransparency = 0.000
-Korean.TextWrapped = true
-
-UITextSizeConstraint_24.Parent = Korean
-UITextSizeConstraint_24.MaxTextSize = 20
-
-Swahili.Name = "Swahili"
-Swahili.Parent = Frame_5
-Swahili.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Swahili.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Swahili.BorderSizePixel = 0
-Swahili.Position = UDim2.new(0.554850101, 0, 0.834907472, 0)
-Swahili.Size = UDim2.new(0.407481015, 0, 0.0914294422, 0)
-Swahili.Font = Enum.Font.Unknown
-Swahili.Text = "Swahili"
-Swahili.TextColor3 = Color3.fromRGB(255, 255, 255)
-Swahili.TextScaled = true
-Swahili.TextSize = 30.000
-Swahili.TextStrokeTransparency = 0.000
-Swahili.TextWrapped = true
-
-UITextSizeConstraint_25.Parent = Swahili
-UITextSizeConstraint_25.MaxTextSize = 20
-
-Marathi.Name = "Marathi"
-Marathi.Parent = Frame_5
-Marathi.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Marathi.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Marathi.BorderSizePixel = 0
-Marathi.Position = UDim2.new(0.283195764, 0, 0.982210577, 0)
-Marathi.Size = UDim2.new(0.407480896, 0, 0.0914294422, 0)
-Marathi.Font = Enum.Font.Unknown
-Marathi.Text = "Marathi"
-Marathi.TextColor3 = Color3.fromRGB(255, 255, 255)
-Marathi.TextScaled = true
-Marathi.TextSize = 30.000
-Marathi.TextStrokeTransparency = 0.000
-Marathi.TextWrapped = true
-
-UITextSizeConstraint_26.Parent = Marathi
-UITextSizeConstraint_26.MaxTextSize = 20
-
-Turkish.Name = "Turkish"
-Turkish.Parent = Frame_5
-Turkish.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-Turkish.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Turkish.BorderSizePixel = 0
-Turkish.Position = UDim2.new(0.554850101, 0, 0.0323605016, 0)
-Turkish.Size = UDim2.new(0.407481015, 0, 0.0914294124, 0)
-Turkish.Font = Enum.Font.Unknown
-Turkish.Text = "Turkish"
-Turkish.TextColor3 = Color3.fromRGB(255, 255, 255)
-Turkish.TextScaled = true
-Turkish.TextSize = 30.000
-Turkish.TextStrokeTransparency = 0.000
-Turkish.TextWrapped = true
-
-UITextSizeConstraint_27.Parent = Turkish
-UITextSizeConstraint_27.MaxTextSize = 20
-
-gg9_4.Name = "gg9"
-gg9_4.Parent = language
-gg9_4.BackgroundColor3 = Color3.fromRGB(134, 45, 203)
-gg9_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-gg9_4.BorderSizePixel = 0
-gg9_4.Position = UDim2.new(0.263414621, 0, 0.0712958723, 0)
-gg9_4.Size = UDim2.new(0.473170727, 0, 0.0111524165, 0)
-
-color.Name = "color"
-color.Parent = settings
-color.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-color.BorderColor3 = Color3.fromRGB(0, 0, 0)
-color.BorderSizePixel = 0
-color.Position = UDim2.new(0.0706075504, 0, 0.0758620724, 0)
-color.Size = UDim2.new(0.33661741, 0, 0.724137902, 0)
-
-Frame_6.Parent = color
-Frame_6.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
-Frame_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_6.BorderSizePixel = 0
-Frame_6.Position = UDim2.new(0.213707298, 0, 0.0755865276, 0)
-Frame_6.Size = UDim2.new(0.563313723, 0, 1.14822304, 0)
-
-Frame_7.Parent = Frame_6
-Frame_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_7.Position = UDim2.new(0.329497337, 0, 0.612535834, 0)
-Frame_7.Size = UDim2.new(0.309278339, 0, 0.124444447, 0)
-
-UICorner_15.Parent = Frame_7
-
-ColorWheel.Name = "ColorWheel"
-ColorWheel.Parent = Frame_6
-ColorWheel.AnchorPoint = Vector2.new(0.5, 0.5)
-ColorWheel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ColorWheel.BackgroundTransparency = 1.000
-ColorWheel.Position = UDim2.new(0.496814847, 0, 0.336276472, 0)
-ColorWheel.Size = UDim2.new(1.03092778, 0, 0.444444448, 0)
-ColorWheel.Image = "rbxassetid://11224004075"
-
-Cursor.Name = "Cursor"
-Cursor.Parent = ColorWheel
-Cursor.AnchorPoint = Vector2.new(0.5, 0.5)
-Cursor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Cursor.BackgroundTransparency = 1.000
-Cursor.Position = UDim2.new(0.5, 0, 0.5, 0)
-Cursor.Size = UDim2.new(0.150000006, 0, 0.150000006, 0)
-Cursor.ZIndex = 4
-Cursor.Image = "rbxassetid://11226149359"
-
-ValueSelector.Name = "ValueSelector"
-ValueSelector.Parent = Frame_6
-ValueSelector.Active = false
-ValueSelector.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ValueSelector.Position = UDim2.new(-0.451747626, 0, 0.124217935, 0)
-ValueSelector.Selectable = false
-ValueSelector.Size = UDim2.new(0.309278339, 0, 0.444444448, 0)
-ValueSelector.AutoButtonColor = false
-ValueSelector.Text = ""
-
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient.Rotation = -90
-UIGradient.Parent = ValueSelector
-
-Cursor_2.Name = "Cursor"
-Cursor_2.Parent = ValueSelector
-Cursor_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Cursor_2.Size = UDim2.new(1, 0, 0.0500000007, 0)
-
-gg9_5.Name = "gg9"
-gg9_5.Parent = color
-gg9_5.BackgroundColor3 = Color3.fromRGB(134, 45, 203)
-gg9_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-gg9_5.BorderSizePixel = 0
-gg9_5.Position = UDim2.new(0.258536577, 0, 0.0328991115, 0)
-gg9_5.Size = UDim2.new(0.473170727, 0, 0.0142857153, 0)
-
-lol2.Name = "lol2"
-lol2.Parent = color
-lol2.BackgroundColor3 = Color3.fromRGB(21, 19, 21)
-lol2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-lol2.BorderSizePixel = 0
-lol2.Position = UDim2.new(0.287133485, 0, 0.0713262632, 0)
-lol2.Size = UDim2.new(0.424390256, 0, 0.0857142955, 0)
-lol2.Font = Enum.Font.Unknown
-lol2.Text = "back to normal"
-lol2.TextColor3 = Color3.fromRGB(255, 255, 255)
-lol2.TextScaled = true
-lol2.TextSize = 22.000
-lol2.TextStrokeTransparency = 0.000
-lol2.TextWrapped = true
-
-UITextSizeConstraint_28.Parent = lol2
-UITextSizeConstraint_28.MaxTextSize = 22
-
-lol_2.Name = "lol"
-lol_2.Parent = color
-lol_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-lol_2.BackgroundTransparency = 1.000
-lol_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-lol_2.BorderSizePixel = 0
-lol_2.ClipsDescendants = true
-lol_2.Position = UDim2.new(0, 0, -0.0626287535, 0)
-lol_2.Size = UDim2.new(0.995121956, 0, 0.0952381045, 0)
-lol_2.Font = Enum.Font.Unknown
-lol_2.Text = "Executor Color"
-lol_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-lol_2.TextScaled = true
-lol_2.TextSize = 20.000
-lol_2.TextWrapped = true
-
-UITextSizeConstraint_29.Parent = lol_2
-UITextSizeConstraint_29.MaxTextSize = 20
-
-gg9_6.Name = "gg9"
-gg9_6.Parent = MAIN
-gg9_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-gg9_6.BackgroundTransparency = 1.000
-gg9_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-gg9_6.BorderSizePixel = 0
-gg9_6.Position = UDim2.new(-0.0582434759, 0, -0.0761420131, 0)
-gg9_6.Size = UDim2.new(1.12479472, 0, 1.15076935, 0)
-gg9_6.ZIndex = 0
-gg9_6.Image = "rbxassetid://15114678644"
-gg9_6.ImageColor3 = Color3.fromRGB(105, 54, 119)
-gg9_6.ImageTransparency = 0.600
-
-UICorner_16.Parent = MAIN
-
--- Scripts:
-
-local function LTSXAE_fake_script() -- EVONUI.LocalScript 
-	local script = Instance.new('LocalScript', EVONUI)
+local G2L = {};
+
+-- StarterGui.EVONUI
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["Name"] = [[EVONUI]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.EVONUI.open
+G2L["2"] = Instance.new("ImageButton", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["Image"] = [[rbxassetid://15204016915]];
+G2L["2"]["Size"] = UDim2.new(0, 28, 0, 27);
+G2L["2"]["Name"] = [[open]];
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Position"] = UDim2.new(0.49762603640556335, 0, 0.01986755058169365, 0);
+G2L["2"]["BackgroundTransparency"] = 0.9900000095367432;
+
+-- StarterGui.EVONUI.LocalScript
+G2L["3"] = Instance.new("LocalScript", G2L["1"]);
+
+
+-- StarterGui.EVONUI.MAIN
+G2L["4"] = Instance.new("Frame", G2L["1"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["4"]["Size"] = UDim2.new(0.5560628175735474, 0, 0.5380794405937195, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Position"] = UDim2.new(0.23199999332427979, 0, 5, 0);
+G2L["4"]["Name"] = [[MAIN]];
+
+-- StarterGui.EVONUI.MAIN.topbar
+G2L["5"] = Instance.new("Frame", G2L["4"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["5"]["Size"] = UDim2.new(1, 0, 0.10235408693552017, 0);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Position"] = UDim2.new(0, 0, 0.009230910800397396, 0);
+G2L["5"]["Name"] = [[topbar]];
+
+-- StarterGui.EVONUI.MAIN.topbar.UICorner
+G2L["6"] = Instance.new("UICorner", G2L["5"]);
+G2L["6"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.EVONUI.MAIN.topbar.scriptsbutton
+G2L["7"] = Instance.new("TextButton", G2L["5"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextScaled"] = true;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["7"]["TextSize"] = 20;
+G2L["7"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(133, 132, 133);
+G2L["7"]["Size"] = UDim2.new(0.07389162480831146, 0, 0.8484848737716675, 0);
+G2L["7"]["Name"] = [[scriptsbutton]];
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[Scripts]];
+G2L["7"]["Position"] = UDim2.new(0.46237286925315857, 0, 0.09090909361839294, 0);
+
+-- StarterGui.EVONUI.MAIN.topbar.scriptsbutton.UITextSizeConstraint
+G2L["8"] = Instance.new("UITextSizeConstraint", G2L["7"]);
+G2L["8"]["MaxTextSize"] = 25;
+
+-- StarterGui.EVONUI.MAIN.topbar.executorbutton
+G2L["9"] = Instance.new("TextButton", G2L["5"]);
+G2L["9"]["TextWrapped"] = true;
+G2L["9"]["TextStrokeTransparency"] = 0;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextScaled"] = true;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["9"]["TextSize"] = 25;
+G2L["9"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["Size"] = UDim2.new(0.07389162480831146, 0, 0.8484848737716675, 0);
+G2L["9"]["Name"] = [[executorbutton]];
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[Executor]];
+G2L["9"]["Position"] = UDim2.new(0.34858670830726624, 0, 0.09090909361839294, 0);
+
+-- StarterGui.EVONUI.MAIN.topbar.executorbutton.UITextSizeConstraint
+G2L["a"] = Instance.new("UITextSizeConstraint", G2L["9"]);
+G2L["a"]["MaxTextSize"] = 22;
+
+-- StarterGui.EVONUI.MAIN.topbar.settingsbutton
+G2L["b"] = Instance.new("TextButton", G2L["5"]);
+G2L["b"]["TextWrapped"] = true;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextScaled"] = true;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["b"]["TextSize"] = 25;
+G2L["b"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["b"]["TextColor3"] = Color3.fromRGB(133, 132, 133);
+G2L["b"]["Size"] = UDim2.new(0.07389162480831146, 0, 0.8484848737716675, 0);
+G2L["b"]["Name"] = [[settingsbutton]];
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[Settings]];
+G2L["b"]["Position"] = UDim2.new(0.5724712014198303, 0, 0.09090909361839294, 0);
+
+-- StarterGui.EVONUI.MAIN.topbar.settingsbutton.UITextSizeConstraint
+G2L["c"] = Instance.new("UITextSizeConstraint", G2L["b"]);
+G2L["c"]["MaxTextSize"] = 22;
+
+-- StarterGui.EVONUI.MAIN.topbar.close
+G2L["d"] = Instance.new("ImageButton", G2L["5"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["Image"] = [[rbxassetid://15115278951]];
+G2L["d"]["Size"] = UDim2.new(0.041050903499126434, 0, 0.7272727489471436, 0);
+G2L["d"]["Name"] = [[close]];
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Position"] = UDim2.new(0.9524403810501099, 0, 0.09090909361839294, 0);
+G2L["d"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.EVONUI.MAIN.topbar.gg9
+G2L["e"] = Instance.new("ImageLabel", G2L["5"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["Image"] = [[rbxassetid://15204016915]];
+G2L["e"]["Size"] = UDim2.new(0.03228669613599777, 0, 0.6359999179840088, 0);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Name"] = [[gg9]];
+G2L["e"]["BackgroundTransparency"] = 1;
+G2L["e"]["Position"] = UDim2.new(0.010406243614852428, 0, 0.1209714412689209, 0);
+
+-- StarterGui.EVONUI.MAIN.topbar.TextLabel
+G2L["f"] = Instance.new("TextLabel", G2L["5"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f"]["TextSize"] = 30;
+G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["Size"] = UDim2.new(0, 76, 0, 20);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Text"] = [[I Evon I V2]];
+G2L["f"]["BackgroundTransparency"] = 1;
+G2L["f"]["Position"] = UDim2.new(0.04926108196377754, 0, 0.12097097933292389, 0);
+
+-- StarterGui.EVONUI.MAIN.frames
+G2L["10"] = Instance.new("Frame", G2L["4"]);
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["10"]["Size"] = UDim2.new(1, 0, 0.8892308473587036, 0);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Position"] = UDim2.new(0, 0, 0.10963458567857742, 0);
+G2L["10"]["Name"] = [[frames]];
+
+-- StarterGui.EVONUI.MAIN.frames.UICorner
+G2L["11"] = Instance.new("UICorner", G2L["10"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.executor
+G2L["12"] = Instance.new("Frame", G2L["10"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["12"]["Size"] = UDim2.new(1, 0, 1.003460168838501, 0);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Position"] = UDim2.new(0, 0, -0.002305802423506975, 0);
+G2L["12"]["Name"] = [[executor]];
+
+-- StarterGui.EVONUI.MAIN.frames.executor.UICorner
+G2L["13"] = Instance.new("UICorner", G2L["12"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons
+G2L["14"] = Instance.new("Frame", G2L["12"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(26, 25, 27);
+G2L["14"]["Size"] = UDim2.new(0.9901480078697205, 0, 0.09058307856321335, 0);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Position"] = UDim2.new(0.010406243614852428, 0, 0.0014255918795242906, 0);
+G2L["14"]["Name"] = [[buttons]];
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.execute
+G2L["15"] = Instance.new("Frame", G2L["14"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(26, 25, 27);
+G2L["15"]["Size"] = UDim2.new(0.10797341912984848, 0, 0.949999988079071, 0);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Position"] = UDim2.new(0, 0, 0.05000000074505806, 0);
+G2L["15"]["Name"] = [[execute]];
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.execute.TextButton
+G2L["16"] = Instance.new("TextButton", G2L["15"]);
+G2L["16"]["TextWrapped"] = true;
+G2L["16"]["TextStrokeTransparency"] = 0;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextScaled"] = true;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(26, 25, 27);
+G2L["16"]["TextSize"] = 22;
+G2L["16"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["Size"] = UDim2.new(0, 45, 0, 18);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Text"] = [[Execute]];
+G2L["16"]["Position"] = UDim2.new(0.3029634952545166, 0, 0.04667583107948303, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.execute.TextButton.UITextSizeConstraint
+G2L["17"] = Instance.new("UITextSizeConstraint", G2L["16"]);
+G2L["17"]["MaxTextSize"] = 22;
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.execute.ImageLabel
+G2L["18"] = Instance.new("ImageLabel", G2L["15"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["Image"] = [[rbxassetid://15115194626]];
+G2L["18"]["Size"] = UDim2.new(0, 19, 0, 19);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["BackgroundTransparency"] = 1;
+G2L["18"]["Position"] = UDim2.new(0, 0, -8.030941671677283e-07, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.UIGridLayout
+G2L["19"] = Instance.new("UIGridLayout", G2L["14"]);
+G2L["19"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["19"]["CellSize"] = UDim2.new(0, 65, 0, 19);
+G2L["19"]["CellPadding"] = UDim2.new(0, 15, 0, 5);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.clear
+G2L["1a"] = Instance.new("Frame", G2L["14"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(26, 25, 27);
+G2L["1a"]["Size"] = UDim2.new(0.10797341912984848, 0, 0.949999988079071, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Position"] = UDim2.new(0, 0, 0.05000000074505806, 0);
+G2L["1a"]["Name"] = [[clear]];
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.clear.TextButton
+G2L["1b"] = Instance.new("TextButton", G2L["1a"]);
+G2L["1b"]["TextWrapped"] = true;
+G2L["1b"]["TextStrokeTransparency"] = 0;
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["TextScaled"] = true;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(26, 25, 27);
+G2L["1b"]["TextSize"] = 22;
+G2L["1b"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["Size"] = UDim2.new(0, 45, 0, 18);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Text"] = [[Clear]];
+G2L["1b"]["Position"] = UDim2.new(0.3029634952545166, 0, 0.04667583107948303, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.clear.TextButton.UITextSizeConstraint
+G2L["1c"] = Instance.new("UITextSizeConstraint", G2L["1b"]);
+G2L["1c"]["MaxTextSize"] = 22;
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.clear.ImageLabel
+G2L["1d"] = Instance.new("ImageLabel", G2L["1a"]);
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["Image"] = [[rbxassetid://15115285389]];
+G2L["1d"]["Size"] = UDim2.new(0, 19, 0, 19);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["BackgroundTransparency"] = 1;
+G2L["1d"]["Position"] = UDim2.new(0, 0, -8.030941671677283e-07, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.copy
+G2L["1e"] = Instance.new("Frame", G2L["14"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(26, 25, 27);
+G2L["1e"]["Size"] = UDim2.new(0.10797341912984848, 0, 0.949999988079071, 0);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Position"] = UDim2.new(0, 0, 0.05000000074505806, 0);
+G2L["1e"]["Name"] = [[copy]];
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.copy.TextButton
+G2L["1f"] = Instance.new("TextButton", G2L["1e"]);
+G2L["1f"]["TextWrapped"] = true;
+G2L["1f"]["TextStrokeTransparency"] = 0;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["TextScaled"] = true;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(26, 25, 27);
+G2L["1f"]["TextSize"] = 22;
+G2L["1f"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["Size"] = UDim2.new(0, 45, 0, 19);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Text"] = [[Copy]];
+G2L["1f"]["Position"] = UDim2.new(0.3029634952545166, 0, 0.04667583107948303, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.copy.TextButton.UITextSizeConstraint
+G2L["20"] = Instance.new("UITextSizeConstraint", G2L["1f"]);
+G2L["20"]["MaxTextSize"] = 22;
+
+-- StarterGui.EVONUI.MAIN.frames.executor.buttons.copy.ImageLabel
+G2L["21"] = Instance.new("ImageLabel", G2L["1e"]);
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["Image"] = [[rbxassetid://15115286653]];
+G2L["21"]["Size"] = UDim2.new(0.29230770468711853, 0, 1, 0);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["BackgroundTransparency"] = 1;
+G2L["21"]["Position"] = UDim2.new(0, 0, -8.030941671677283e-07, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox
+G2L["22"] = Instance.new("Frame", G2L["12"]);
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["22"]["Size"] = UDim2.new(0.9852216839790344, 0, 0.7896551489830017, 0);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Position"] = UDim2.new(0.007122171111404896, 0, 0.1862068921327591, 0);
+G2L["22"]["Name"] = [[txtbox]];
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame
+G2L["23"] = Instance.new("ScrollingFrame", G2L["22"]);
+G2L["23"]["MidImage"] = [[rbxassetid://148970562]];
+G2L["23"]["ElasticBehavior"] = Enum.ElasticBehavior.Always;
+G2L["23"]["TopImage"] = [[rbxassetid://148970562]];
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(32, 31, 32);
+G2L["23"]["VerticalScrollBarInset"] = Enum.ScrollBarInset.Always;
+G2L["23"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.Always;
+G2L["23"]["BackgroundTransparency"] = 1;
+G2L["23"]["Size"] = UDim2.new(0.996666669845581, 0, 0.9737991094589233, 0);
+G2L["23"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(62, 62, 62);
+G2L["23"]["ScrollBarThickness"] = 15;
+G2L["23"]["Position"] = UDim2.new(0.0033333334140479565, 0, 0.026200873777270317, 0);
+G2L["23"]["Name"] = [[EditorFrame]];
+G2L["23"]["BottomImage"] = [[rbxassetid://148970562]];
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Source
+G2L["24"] = Instance.new("TextBox", G2L["23"]);
+G2L["24"]["PlaceholderColor3"] = Color3.fromRGB(205, 205, 205);
+G2L["24"]["ZIndex"] = 3;
+G2L["24"]["TextSize"] = 15;
+G2L["24"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["24"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24"]["MultiLine"] = true;
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["PlaceholderText"] = [[Welcome To Evon]];
+G2L["24"]["Size"] = UDim2.new(0.6940000057220459, 0, 2, 0);
+G2L["24"]["ClipsDescendants"] = true;
+G2L["24"]["Text"] = [[]];
+G2L["24"]["Position"] = UDim2.new(0.10944710671901703, 0, 1.998968031102777e-07, 0);
+G2L["24"]["Name"] = [[Source]];
+G2L["24"]["ClearTextOnFocus"] = false;
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Source.Comments_
+G2L["25"] = Instance.new("TextLabel", G2L["24"]);
+G2L["25"]["ZIndex"] = 5;
+G2L["25"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25"]["TextSize"] = 15;
+G2L["25"]["TextColor3"] = Color3.fromRGB(60, 201, 60);
+G2L["25"]["Size"] = UDim2.new(1, 0, 0.9999998807907104, 0);
+G2L["25"]["Text"] = [[]];
+G2L["25"]["Name"] = [[Comments_]];
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Source.Globals_
+G2L["26"] = Instance.new("TextLabel", G2L["24"]);
+G2L["26"]["ZIndex"] = 5;
+G2L["26"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["26"]["TextSize"] = 15;
+G2L["26"]["TextColor3"] = Color3.fromRGB(133, 215, 248);
+G2L["26"]["Size"] = UDim2.new(1, 0, 0.9999998807907104, 0);
+G2L["26"]["Text"] = [[]];
+G2L["26"]["Name"] = [[Globals_]];
+G2L["26"]["BackgroundTransparency"] = 1;
+G2L["26"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Source.Keywords_
+G2L["27"] = Instance.new("TextLabel", G2L["24"]);
+G2L["27"]["ZIndex"] = 5;
+G2L["27"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["27"]["TextSize"] = 15;
+G2L["27"]["TextColor3"] = Color3.fromRGB(249, 110, 125);
+G2L["27"]["Size"] = UDim2.new(1, 0, 0.9999998807907104, 0);
+G2L["27"]["Text"] = [[]];
+G2L["27"]["Name"] = [[Keywords_]];
+G2L["27"]["BackgroundTransparency"] = 1;
+G2L["27"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Source.RemoteHighlight_
+G2L["28"] = Instance.new("TextLabel", G2L["24"]);
+G2L["28"]["ZIndex"] = 5;
+G2L["28"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["28"]["TextSize"] = 15;
+G2L["28"]["TextColor3"] = Color3.fromRGB(0, 145, 255);
+G2L["28"]["Size"] = UDim2.new(1, 0, 0.9999998807907104, 0);
+G2L["28"]["Text"] = [[]];
+G2L["28"]["Name"] = [[RemoteHighlight_]];
+G2L["28"]["BackgroundTransparency"] = 1;
+G2L["28"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Source.Strings_
+G2L["29"] = Instance.new("TextLabel", G2L["24"]);
+G2L["29"]["ZIndex"] = 5;
+G2L["29"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["29"]["TextSize"] = 15;
+G2L["29"]["TextColor3"] = Color3.fromRGB(174, 242, 150);
+G2L["29"]["Size"] = UDim2.new(1, 0, 0.9999998807907104, 0);
+G2L["29"]["Text"] = [[]];
+G2L["29"]["Name"] = [[Strings_]];
+G2L["29"]["BackgroundTransparency"] = 1;
+G2L["29"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Source.Tokens_
+G2L["2a"] = Instance.new("TextLabel", G2L["24"]);
+G2L["2a"]["ZIndex"] = 5;
+G2L["2a"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2a"]["TextSize"] = 15;
+G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["Size"] = UDim2.new(1, 0, 0.9999998807907104, 0);
+G2L["2a"]["Text"] = [[]];
+G2L["2a"]["Name"] = [[Tokens_]];
+G2L["2a"]["BackgroundTransparency"] = 1;
+G2L["2a"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Source.Numbers_
+G2L["2b"] = Instance.new("TextLabel", G2L["24"]);
+G2L["2b"]["ZIndex"] = 4;
+G2L["2b"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2b"]["TextSize"] = 15;
+G2L["2b"]["TextColor3"] = Color3.fromRGB(255, 199, 0);
+G2L["2b"]["Size"] = UDim2.new(1, 0, 0.9999998807907104, 0);
+G2L["2b"]["Text"] = [[]];
+G2L["2b"]["Name"] = [[Numbers_]];
+G2L["2b"]["BackgroundTransparency"] = 1;
+G2L["2b"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.TextLabel
+G2L["2c"] = Instance.new("TextLabel", G2L["23"]);
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(32, 31, 32);
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2c"]["TextSize"] = 15;
+G2L["2c"]["TextColor3"] = Color3.fromRGB(158, 156, 158);
+G2L["2c"]["Size"] = UDim2.new(0.10199999809265137, 0, 2, 0);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Text"] = [[1]];
+G2L["2c"]["BackgroundTransparency"] = 1;
+G2L["2c"]["Position"] = UDim2.new(0.0006463536992669106, 0, 0, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Frame
+G2L["2d"] = Instance.new("Frame", G2L["23"]);
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(32, 31, 32);
+G2L["2d"]["Size"] = UDim2.new(0.19499999284744263, 0, 2, 0);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["Position"] = UDim2.new(0.8029999732971191, 0, -0.004000000189989805, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Frame.lol
+G2L["2e"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(32, 31, 32);
+G2L["2e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2e"]["TextSize"] = 5;
+G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 253, 255);
+G2L["2e"]["Size"] = UDim2.new(1, 0, 2, 0);
+G2L["2e"]["ClipsDescendants"] = true;
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[]];
+G2L["2e"]["Name"] = [[lol]];
+G2L["2e"]["BackgroundTransparency"] = 1;
+G2L["2e"]["Position"] = UDim2.new(0.0006463536992669106, 0, 0, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Frame.Comments_
+G2L["2f"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["2f"]["ZIndex"] = 5;
+G2L["2f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2f"]["TextSize"] = 5;
+G2L["2f"]["TextColor3"] = Color3.fromRGB(60, 201, 60);
+G2L["2f"]["Size"] = UDim2.new(1, 0, 2, 0);
+G2L["2f"]["ClipsDescendants"] = true;
+G2L["2f"]["Text"] = [[]];
+G2L["2f"]["Name"] = [[Comments_]];
+G2L["2f"]["BackgroundTransparency"] = 1;
+G2L["2f"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Frame.Globals_
+G2L["30"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["30"]["ZIndex"] = 5;
+G2L["30"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["30"]["TextSize"] = 5;
+G2L["30"]["TextColor3"] = Color3.fromRGB(133, 215, 248);
+G2L["30"]["Size"] = UDim2.new(1, 0, 2, 0);
+G2L["30"]["ClipsDescendants"] = true;
+G2L["30"]["Text"] = [[]];
+G2L["30"]["Name"] = [[Globals_]];
+G2L["30"]["BackgroundTransparency"] = 1;
+G2L["30"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Frame.Keywords_
+G2L["31"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["31"]["ZIndex"] = 5;
+G2L["31"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["31"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["31"]["TextSize"] = 5;
+G2L["31"]["TextColor3"] = Color3.fromRGB(249, 110, 125);
+G2L["31"]["Size"] = UDim2.new(1, 0, 2, 0);
+G2L["31"]["ClipsDescendants"] = true;
+G2L["31"]["Text"] = [[]];
+G2L["31"]["Name"] = [[Keywords_]];
+G2L["31"]["BackgroundTransparency"] = 1;
+G2L["31"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Frame.Numbers_
+G2L["32"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["32"]["ZIndex"] = 5;
+G2L["32"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["32"]["TextSize"] = 5;
+G2L["32"]["TextColor3"] = Color3.fromRGB(255, 199, 0);
+G2L["32"]["Size"] = UDim2.new(1, 0, 2, 0);
+G2L["32"]["ClipsDescendants"] = true;
+G2L["32"]["Text"] = [[]];
+G2L["32"]["Name"] = [[Numbers_]];
+G2L["32"]["BackgroundTransparency"] = 1;
+G2L["32"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Frame.RemoteHighlight_
+G2L["33"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["33"]["ZIndex"] = 5;
+G2L["33"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["33"]["TextSize"] = 5;
+G2L["33"]["TextColor3"] = Color3.fromRGB(0, 145, 255);
+G2L["33"]["Size"] = UDim2.new(1, 0, 2, 0);
+G2L["33"]["ClipsDescendants"] = true;
+G2L["33"]["Text"] = [[]];
+G2L["33"]["Name"] = [[RemoteHighlight_]];
+G2L["33"]["BackgroundTransparency"] = 1;
+G2L["33"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Frame.Strings_
+G2L["34"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["34"]["ZIndex"] = 5;
+G2L["34"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["34"]["TextSize"] = 5;
+G2L["34"]["TextColor3"] = Color3.fromRGB(174, 242, 150);
+G2L["34"]["Size"] = UDim2.new(1, 0, 2, 0);
+G2L["34"]["ClipsDescendants"] = true;
+G2L["34"]["Text"] = [[]];
+G2L["34"]["Name"] = [[Strings_]];
+G2L["34"]["BackgroundTransparency"] = 1;
+G2L["34"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Frame.Tokens_
+G2L["35"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["35"]["ZIndex"] = 5;
+G2L["35"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["35"]["TextSize"] = 5;
+G2L["35"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["Size"] = UDim2.new(1, 0, 2, 0);
+G2L["35"]["ClipsDescendants"] = true;
+G2L["35"]["Text"] = [[]];
+G2L["35"]["Name"] = [[Tokens_]];
+G2L["35"]["BackgroundTransparency"] = 1;
+G2L["35"]["Position"] = UDim2.new(0, 0, 6.842397937134592e-08, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Frame.LocalScript
+G2L["36"] = Instance.new("LocalScript", G2L["2d"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.UICorner
+G2L["37"] = Instance.new("UICorner", G2L["23"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.executor.scripts
+G2L["38"] = Instance.new("Frame", G2L["12"]);
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["38"]["Size"] = UDim2.new(0.9868637323379517, 0, 0.09419818967580795, 0);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Position"] = UDim2.new(0.010406243614852428, 0, 0.11269836127758026, 0);
+G2L["38"]["Name"] = [[scripts]];
+
+-- StarterGui.EVONUI.MAIN.frames.executor.scripts.UICorner
+G2L["39"] = Instance.new("UICorner", G2L["38"]);
+G2L["39"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.scripts.TextLabel
+G2L["3a"] = Instance.new("TextLabel", G2L["38"]);
+G2L["3a"]["TextWrapped"] = true;
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["TextScaled"] = true;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3a"]["TextTransparency"] = 0.4000000059604645;
+G2L["3a"]["TextSize"] = 25;
+G2L["3a"]["TextColor3"] = Color3.fromRGB(255, 253, 255);
+G2L["3a"]["Size"] = UDim2.new(1.0138722658157349, 0, 1, 0);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Text"] = [[Owner: Sakpot  I  Powered By FLuxus!  I  UI: Anya_DEV]];
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Position"] = UDim2.new(-0.010544735006988049, 0, -0.14642642438411713, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.executor.scripts.TextLabel.UITextSizeConstraint
+G2L["3b"] = Instance.new("UITextSizeConstraint", G2L["3a"]);
+G2L["3b"]["MaxTextSize"] = 25;
+
+-- StarterGui.EVONUI.MAIN.frames.scripts
+G2L["3c"] = Instance.new("Frame", G2L["10"]);
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["3c"]["Size"] = UDim2.new(1, 0, 1.003460168838501, 0);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["Position"] = UDim2.new(0, 0, -0.002305802423506975, 0);
+G2L["3c"]["Visible"] = false;
+G2L["3c"]["Name"] = [[scripts]];
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.UICorner
+G2L["3d"] = Instance.new("UICorner", G2L["3c"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.search
+G2L["3e"] = Instance.new("Frame", G2L["3c"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(26, 25, 27);
+G2L["3e"]["Size"] = UDim2.new(0.9885057210922241, 0, 0.06896551698446274, 0);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["Position"] = UDim2.new(0.010406243614852428, 0, 0.0014255918795242906, 0);
+G2L["3e"]["Name"] = [[search]];
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.search.UICorner
+G2L["3f"] = Instance.new("UICorner", G2L["3e"]);
+G2L["3f"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.search.TextLabel
+G2L["40"] = Instance.new("TextLabel", G2L["3e"]);
+G2L["40"]["TextWrapped"] = true;
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["TextScaled"] = true;
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["40"]["TextSize"] = 22;
+G2L["40"]["TextColor3"] = Color3.fromRGB(133, 132, 133);
+G2L["40"]["Size"] = UDim2.new(0.28737542033195496, 0, 1, 0);
+G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["Text"] = [[scripts provided by scriptblox.com]];
+G2L["40"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.search.TextLabel.UITextSizeConstraint
+G2L["41"] = Instance.new("UITextSizeConstraint", G2L["40"]);
+G2L["41"]["MaxTextSize"] = 22;
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.search.TextBox
+G2L["42"] = Instance.new("TextBox", G2L["3e"]);
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["TextSize"] = 20;
+G2L["42"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["42"]["TextWrapped"] = true;
+G2L["42"]["TextScaled"] = true;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["42"]["BackgroundTransparency"] = 1;
+G2L["42"]["PlaceholderText"] = [[type game name!]];
+G2L["42"]["Size"] = UDim2.new(0.19601328670978546, 0, 0.949999988079071, 0);
+G2L["42"]["ClipsDescendants"] = true;
+G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["42"]["Text"] = [[]];
+G2L["42"]["Position"] = UDim2.new(0.7541528344154358, 0, 0.01264801062643528, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.search.TextBox.UITextSizeConstraint
+G2L["43"] = Instance.new("UITextSizeConstraint", G2L["42"]);
+G2L["43"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.search.ImageButton
+G2L["44"] = Instance.new("ImageButton", G2L["3e"]);
+G2L["44"]["BorderSizePixel"] = 0;
+G2L["44"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["44"]["Image"] = [[rbxassetid://15115310494]];
+G2L["44"]["Size"] = UDim2.new(0.024916943162679672, 0, 0.75, 0);
+G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["44"]["Position"] = UDim2.new(0.9579713940620422, 0, 0.06969909369945526, 0);
+G2L["44"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.search.Frame
+G2L["45"] = Instance.new("Frame", G2L["3e"]);
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(160, 160, 160);
+G2L["45"]["Size"] = UDim2.new(0.19601328670978546, 0, 0.05000000074505806, 0);
+G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["45"]["Position"] = UDim2.new(0.7540000081062317, 0, 0.9399999976158142, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame
+G2L["46"] = Instance.new("ScrollingFrame", G2L["3c"]);
+G2L["46"]["Active"] = true;
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["CanvasSize"] = UDim2.new(0, 0, 5, 0);
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["46"]["Size"] = UDim2.new(0.9753694534301758, 0, 0.8482758402824402, 0);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["ScrollBarThickness"] = 9;
+G2L["46"]["Position"] = UDim2.new(0.009000029414892197, 0, 0.10924135148525238, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.UIGridLayout
+G2L["47"] = Instance.new("UIGridLayout", G2L["46"]);
+G2L["47"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["47"]["CellSize"] = UDim2.new(0, 190, 0, 190);
+G2L["47"]["CellPadding"] = UDim2.new(0, 10, 0, 5);
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Folder
+G2L["48"] = Instance.new("Folder", G2L["46"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Folder.Frame
+G2L["49"] = Instance.new("Frame", G2L["48"]);
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["49"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Visible"] = false;
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.UICorner
+G2L["4a"] = Instance.new("UICorner", G2L["49"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.ImageLabel
+G2L["4b"] = Instance.new("ImageLabel", G2L["49"]);
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4b"]["ImageTransparency"] = 0.4000000059604645;
+G2L["4b"]["Image"] = [[rbxassetid://15117873611]];
+G2L["4b"]["Size"] = UDim2.new(1, 0, 0.6684210300445557, 0);
+G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.ImageLabel.UICorner
+G2L["4c"] = Instance.new("UICorner", G2L["4b"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.gg9
+G2L["4d"] = Instance.new("ImageButton", G2L["49"]);
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["SliceScale"] = 0;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(151, 3, 255);
+G2L["4d"]["Image"] = [[rbxassetid://15115194626]];
+G2L["4d"]["Size"] = UDim2.new(0.1631578952074051, 0, 0.15789473056793213, 0);
+G2L["4d"]["Name"] = [[gg9]];
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Position"] = UDim2.new(0.7926031947135925, 0, 0.5789473652839661, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.gg9.UICorner
+G2L["4e"] = Instance.new("UICorner", G2L["4d"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.TextLabel
+G2L["4f"] = Instance.new("TextLabel", G2L["49"]);
+G2L["4f"]["TextWrapped"] = true;
+G2L["4f"]["BorderSizePixel"] = 0;
+G2L["4f"]["TextScaled"] = true;
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4f"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4f"]["TextSize"] = 20;
+G2L["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["Size"] = UDim2.new(0.6526315808296204, 0, 0.10526315867900848, 0);
+G2L["4f"]["ClipsDescendants"] = true;
+G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["Text"] = [[Evon Hub BLux Fruit]];
+G2L["4f"]["BackgroundTransparency"] = 1;
+G2L["4f"]["Position"] = UDim2.new(0.006401142105460167, 0, 0.6684210300445557, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.TextLabel.UITextSizeConstraint
+G2L["50"] = Instance.new("UITextSizeConstraint", G2L["4f"]);
+G2L["50"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Frame
+G2L["51"] = Instance.new("Frame", G2L["46"]);
+G2L["51"]["BorderSizePixel"] = 0;
+G2L["51"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["51"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Frame.UICorner
+G2L["52"] = Instance.new("UICorner", G2L["51"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Frame.ImageLabel
+G2L["53"] = Instance.new("ImageLabel", G2L["51"]);
+G2L["53"]["BorderSizePixel"] = 0;
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["ImageTransparency"] = 0.4000000059604645;
+G2L["53"]["Image"] = [[rbxassetid://15117873611]];
+G2L["53"]["Size"] = UDim2.new(1, 0, 0.6684210300445557, 0);
+G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Frame.ImageLabel.UICorner
+G2L["54"] = Instance.new("UICorner", G2L["53"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Frame.gg9
+G2L["55"] = Instance.new("ImageButton", G2L["51"]);
+G2L["55"]["BorderSizePixel"] = 0;
+G2L["55"]["SliceScale"] = 0;
+G2L["55"]["BackgroundColor3"] = Color3.fromRGB(151, 3, 255);
+G2L["55"]["Image"] = [[rbxassetid://15115194626]];
+G2L["55"]["Size"] = UDim2.new(0.1631578952074051, 0, 0.15789473056793213, 0);
+G2L["55"]["Name"] = [[gg9]];
+G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["55"]["Position"] = UDim2.new(0.7926031947135925, 0, 0.5789473652839661, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Frame.gg9.UICorner
+G2L["56"] = Instance.new("UICorner", G2L["55"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Frame.TextLabel
+G2L["57"] = Instance.new("TextLabel", G2L["51"]);
+G2L["57"]["TextWrapped"] = true;
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["TextScaled"] = true;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["57"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["57"]["TextSize"] = 20;
+G2L["57"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["Size"] = UDim2.new(0.6526315808296204, 0, 0.10526315867900848, 0);
+G2L["57"]["ClipsDescendants"] = true;
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["Text"] = [[Evon Hub BLux Fruit]];
+G2L["57"]["BackgroundTransparency"] = 1;
+G2L["57"]["Position"] = UDim2.new(0.006401142105460167, 0, 0.6684210300445557, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.scripts.ScrollingFrame.Frame.TextLabel.UITextSizeConstraint
+G2L["58"] = Instance.new("UITextSizeConstraint", G2L["57"]);
+G2L["58"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings
+G2L["59"] = Instance.new("Frame", G2L["10"]);
+G2L["59"]["BorderSizePixel"] = 0;
+G2L["59"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["59"]["Size"] = UDim2.new(1, 0, 1.003460168838501, 0);
+G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["59"]["Position"] = UDim2.new(0, 0, -0.002305802423506975, 0);
+G2L["59"]["Visible"] = false;
+G2L["59"]["Name"] = [[settings]];
+
+-- StarterGui.EVONUI.MAIN.frames.settings.UICorner
+G2L["5a"] = Instance.new("UICorner", G2L["59"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language
+G2L["5b"] = Instance.new("Frame", G2L["59"]);
+G2L["5b"]["BorderSizePixel"] = 0;
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["5b"]["Size"] = UDim2.new(0.3366174101829529, 0, 0.9275861978530884, 0);
+G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["Position"] = UDim2.new(0.6157635450363159, 0, 0.03448275849223137, 0);
+G2L["5b"]["Name"] = [[language]];
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.lol
+G2L["5c"] = Instance.new("TextLabel", G2L["5b"]);
+G2L["5c"]["TextWrapped"] = true;
+G2L["5c"]["BorderSizePixel"] = 0;
+G2L["5c"]["TextScaled"] = true;
+G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5c"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["5c"]["TextSize"] = 20;
+G2L["5c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5c"]["Size"] = UDim2.new(0.995121955871582, 0, 0.07434944063425064, 0);
+G2L["5c"]["ClipsDescendants"] = true;
+G2L["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5c"]["Text"] = [[Executor Language]];
+G2L["5c"]["Name"] = [[lol]];
+G2L["5c"]["BackgroundTransparency"] = 1;
+G2L["5c"]["Position"] = UDim2.new(0, 0, -0.0007240267004817724, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.lol.UITextSizeConstraint
+G2L["5d"] = Instance.new("UITextSizeConstraint", G2L["5c"]);
+G2L["5d"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame
+G2L["5e"] = Instance.new("Frame", G2L["5b"]);
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["5e"]["Size"] = UDim2.new(0.5179991722106934, 0, 0.8364312052726746, 0);
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Position"] = UDim2.new(0.23809844255447388, 0, 0.10197397321462631, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.English
+G2L["5f"] = Instance.new("TextButton", G2L["5e"]);
+G2L["5f"]["TextWrapped"] = true;
+G2L["5f"]["TextStrokeTransparency"] = 0;
+G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["TextScaled"] = true;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["5f"]["TextSize"] = 30;
+G2L["5f"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["Size"] = UDim2.new(0.4077027440071106, 0, 0.09142941236495972, 0);
+G2L["5f"]["Name"] = [[English]];
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["Text"] = [[English]];
+G2L["5f"]["Position"] = UDim2.new(0.045734770596027374, 0, 0.03236056864261627, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.English.UITextSizeConstraint
+G2L["60"] = Instance.new("UITextSizeConstraint", G2L["5f"]);
+G2L["60"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Chinese
+G2L["61"] = Instance.new("TextButton", G2L["5e"]);
+G2L["61"]["TextWrapped"] = true;
+G2L["61"]["TextStrokeTransparency"] = 0;
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["TextScaled"] = true;
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["61"]["TextSize"] = 30;
+G2L["61"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["61"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["Size"] = UDim2.new(0.40748101472854614, 0, 0.0914294421672821, 0);
+G2L["61"]["Name"] = [[Chinese]];
+G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["Text"] = [[Chinese]];
+G2L["61"]["Position"] = UDim2.new(0.5548501014709473, 0, 0.6926841735839844, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Chinese.UITextSizeConstraint
+G2L["62"] = Instance.new("UITextSizeConstraint", G2L["61"]);
+G2L["62"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Spanish
+G2L["63"] = Instance.new("TextButton", G2L["5e"]);
+G2L["63"]["TextWrapped"] = true;
+G2L["63"]["TextStrokeTransparency"] = 0;
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["TextScaled"] = true;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["63"]["TextSize"] = 30;
+G2L["63"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["63"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["Size"] = UDim2.new(0.40748101472854614, 0, 0.0914294421672821, 0);
+G2L["63"]["Name"] = [[Spanish]];
+G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["Text"] = [[Spanish]];
+G2L["63"]["Position"] = UDim2.new(0.5548501014709473, 0, 0.2964900732040405, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Spanish.UITextSizeConstraint
+G2L["64"] = Instance.new("UITextSizeConstraint", G2L["63"]);
+G2L["64"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Arabic
+G2L["65"] = Instance.new("TextButton", G2L["5e"]);
+G2L["65"]["TextWrapped"] = true;
+G2L["65"]["TextStrokeTransparency"] = 0;
+G2L["65"]["BorderSizePixel"] = 0;
+G2L["65"]["TextScaled"] = true;
+G2L["65"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["65"]["TextSize"] = 30;
+G2L["65"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["65"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["65"]["Size"] = UDim2.new(0.40748101472854614, 0, 0.09142941236495972, 0);
+G2L["65"]["Name"] = [[Arabic]];
+G2L["65"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["65"]["Text"] = [[Arabic]];
+G2L["65"]["Position"] = UDim2.new(0.038707006722688675, 0, 0.16442511975765228, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Arabic.UITextSizeConstraint
+G2L["66"] = Instance.new("UITextSizeConstraint", G2L["65"]);
+G2L["66"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Hindi
+G2L["67"] = Instance.new("TextButton", G2L["5e"]);
+G2L["67"]["TextWrapped"] = true;
+G2L["67"]["TextStrokeTransparency"] = 0;
+G2L["67"]["BorderSizePixel"] = 0;
+G2L["67"]["TextScaled"] = true;
+G2L["67"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["67"]["TextSize"] = 30;
+G2L["67"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["67"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["67"]["Size"] = UDim2.new(0.40748101472854614, 0, 0.0914294421672821, 0);
+G2L["67"]["Name"] = [[Hindi]];
+G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["Text"] = [[Hindi]];
+G2L["67"]["Position"] = UDim2.new(0.5548501014709473, 0, 0.4183957278728485, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Hindi.UITextSizeConstraint
+G2L["68"] = Instance.new("UITextSizeConstraint", G2L["67"]);
+G2L["68"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.French
+G2L["69"] = Instance.new("TextButton", G2L["5e"]);
+G2L["69"]["TextWrapped"] = true;
+G2L["69"]["TextStrokeTransparency"] = 0;
+G2L["69"]["BorderSizePixel"] = 0;
+G2L["69"]["TextScaled"] = true;
+G2L["69"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["69"]["TextSize"] = 30;
+G2L["69"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["69"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["69"]["Size"] = UDim2.new(0.40748101472854614, 0, 0.0914294421672821, 0);
+G2L["69"]["Name"] = [[French]];
+G2L["69"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["69"]["Text"] = [[French]];
+G2L["69"]["Position"] = UDim2.new(0.038707006722688675, 0, 0.6926841735839844, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.French.UITextSizeConstraint
+G2L["6a"] = Instance.new("UITextSizeConstraint", G2L["69"]);
+G2L["6a"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Russian
+G2L["6b"] = Instance.new("TextButton", G2L["5e"]);
+G2L["6b"]["TextWrapped"] = true;
+G2L["6b"]["TextStrokeTransparency"] = 0;
+G2L["6b"]["BorderSizePixel"] = 0;
+G2L["6b"]["TextScaled"] = true;
+G2L["6b"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["6b"]["TextSize"] = 30;
+G2L["6b"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6b"]["Size"] = UDim2.new(0.40748095512390137, 0, 0.0914294421672821, 0);
+G2L["6b"]["Name"] = [[Russian]];
+G2L["6b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6b"]["Text"] = [[Russian]];
+G2L["6b"]["Position"] = UDim2.new(0.04776257276535034, 0, 0.8349074721336365, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Russian.UITextSizeConstraint
+G2L["6c"] = Instance.new("UITextSizeConstraint", G2L["6b"]);
+G2L["6c"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Bengali
+G2L["6d"] = Instance.new("TextButton", G2L["5e"]);
+G2L["6d"]["TextWrapped"] = true;
+G2L["6d"]["TextStrokeTransparency"] = 0;
+G2L["6d"]["BorderSizePixel"] = 0;
+G2L["6d"]["TextScaled"] = true;
+G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["6d"]["TextSize"] = 30;
+G2L["6d"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6d"]["Size"] = UDim2.new(0.40748101472854614, 0, 0.0914294421672821, 0);
+G2L["6d"]["Name"] = [[Bengali]];
+G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6d"]["Text"] = [[Bengali]];
+G2L["6d"]["Position"] = UDim2.new(0.5548501014709473, 0, 0.5555398464202881, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Bengali.UITextSizeConstraint
+G2L["6e"] = Instance.new("UITextSizeConstraint", G2L["6d"]);
+G2L["6e"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Portuguese
+G2L["6f"] = Instance.new("TextButton", G2L["5e"]);
+G2L["6f"]["TextWrapped"] = true;
+G2L["6f"]["TextStrokeTransparency"] = 0;
+G2L["6f"]["BorderSizePixel"] = 0;
+G2L["6f"]["TextScaled"] = true;
+G2L["6f"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["6f"]["TextSize"] = 30;
+G2L["6f"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6f"]["Size"] = UDim2.new(0.40748101472854614, 0, 0.09142941236495972, 0);
+G2L["6f"]["Name"] = [[Portuguese]];
+G2L["6f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6f"]["Text"] = [[Portuguese]];
+G2L["6f"]["Position"] = UDim2.new(0.5548501014709473, 0, 0.16442511975765228, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Portuguese.UITextSizeConstraint
+G2L["70"] = Instance.new("UITextSizeConstraint", G2L["6f"]);
+G2L["70"]["MaxTextSize"] = 14;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.German
+G2L["71"] = Instance.new("TextButton", G2L["5e"]);
+G2L["71"]["TextWrapped"] = true;
+G2L["71"]["TextStrokeTransparency"] = 0;
+G2L["71"]["BorderSizePixel"] = 0;
+G2L["71"]["TextScaled"] = true;
+G2L["71"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["71"]["TextSize"] = 30;
+G2L["71"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["71"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["71"]["Size"] = UDim2.new(0.40748095512390137, 0, 0.0914294421672821, 0);
+G2L["71"]["Name"] = [[German]];
+G2L["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["71"]["Text"] = [[German]];
+G2L["71"]["Position"] = UDim2.new(0.04776257276535034, 0, 0.4183957278728485, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.German.UITextSizeConstraint
+G2L["72"] = Instance.new("UITextSizeConstraint", G2L["71"]);
+G2L["72"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Japanese
+G2L["73"] = Instance.new("TextButton", G2L["5e"]);
+G2L["73"]["TextWrapped"] = true;
+G2L["73"]["TextStrokeTransparency"] = 0;
+G2L["73"]["BorderSizePixel"] = 0;
+G2L["73"]["TextScaled"] = true;
+G2L["73"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["73"]["TextSize"] = 30;
+G2L["73"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["73"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["73"]["Size"] = UDim2.new(0.40748101472854614, 0, 0.0914294421672821, 0);
+G2L["73"]["Name"] = [[Japanese]];
+G2L["73"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["73"]["Text"] = [[Japanese]];
+G2L["73"]["Position"] = UDim2.new(0.038707006722688675, 0, 0.5555398464202881, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Japanese.UITextSizeConstraint
+G2L["74"] = Instance.new("UITextSizeConstraint", G2L["73"]);
+G2L["74"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Korean
+G2L["75"] = Instance.new("TextButton", G2L["5e"]);
+G2L["75"]["TextWrapped"] = true;
+G2L["75"]["TextStrokeTransparency"] = 0;
+G2L["75"]["BorderSizePixel"] = 0;
+G2L["75"]["TextScaled"] = true;
+G2L["75"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["75"]["TextSize"] = 30;
+G2L["75"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["75"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["75"]["Size"] = UDim2.new(0.40748101472854614, 0, 0.0914294421672821, 0);
+G2L["75"]["Name"] = [[Korean]];
+G2L["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["75"]["Text"] = [[Korean]];
+G2L["75"]["Position"] = UDim2.new(0.038707006722688675, 0, 0.2964900732040405, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Korean.UITextSizeConstraint
+G2L["76"] = Instance.new("UITextSizeConstraint", G2L["75"]);
+G2L["76"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Swahili
+G2L["77"] = Instance.new("TextButton", G2L["5e"]);
+G2L["77"]["TextWrapped"] = true;
+G2L["77"]["TextStrokeTransparency"] = 0;
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["TextScaled"] = true;
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["77"]["TextSize"] = 30;
+G2L["77"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["77"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["Size"] = UDim2.new(0.40748101472854614, 0, 0.0914294421672821, 0);
+G2L["77"]["Name"] = [[Swahili]];
+G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["Text"] = [[Swahili]];
+G2L["77"]["Position"] = UDim2.new(0.5548501014709473, 0, 0.8349074721336365, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Swahili.UITextSizeConstraint
+G2L["78"] = Instance.new("UITextSizeConstraint", G2L["77"]);
+G2L["78"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Marathi
+G2L["79"] = Instance.new("TextButton", G2L["5e"]);
+G2L["79"]["TextWrapped"] = true;
+G2L["79"]["TextStrokeTransparency"] = 0;
+G2L["79"]["BorderSizePixel"] = 0;
+G2L["79"]["TextScaled"] = true;
+G2L["79"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["79"]["TextSize"] = 30;
+G2L["79"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["79"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["79"]["Size"] = UDim2.new(0.4074808955192566, 0, 0.0914294421672821, 0);
+G2L["79"]["Name"] = [[Marathi]];
+G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["79"]["Text"] = [[Marathi]];
+G2L["79"]["Position"] = UDim2.new(0.28319576382637024, 0, 0.9822105765342712, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Marathi.UITextSizeConstraint
+G2L["7a"] = Instance.new("UITextSizeConstraint", G2L["79"]);
+G2L["7a"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Turkish
+G2L["7b"] = Instance.new("TextButton", G2L["5e"]);
+G2L["7b"]["TextWrapped"] = true;
+G2L["7b"]["TextStrokeTransparency"] = 0;
+G2L["7b"]["BorderSizePixel"] = 0;
+G2L["7b"]["TextScaled"] = true;
+G2L["7b"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["7b"]["TextSize"] = 30;
+G2L["7b"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7b"]["Size"] = UDim2.new(0.40748101472854614, 0, 0.09142941236495972, 0);
+G2L["7b"]["Name"] = [[Turkish]];
+G2L["7b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7b"]["Text"] = [[Turkish]];
+G2L["7b"]["Position"] = UDim2.new(0.5548501014709473, 0, 0.0323605015873909, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.Frame.Turkish.UITextSizeConstraint
+G2L["7c"] = Instance.new("UITextSizeConstraint", G2L["7b"]);
+G2L["7c"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.language.gg9
+G2L["7d"] = Instance.new("Frame", G2L["5b"]);
+G2L["7d"]["BorderSizePixel"] = 0;
+G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(135, 46, 204);
+G2L["7d"]["Size"] = UDim2.new(0.4731707274913788, 0, 0.011152416467666626, 0);
+G2L["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7d"]["Position"] = UDim2.new(0.2634146213531494, 0, 0.07129587233066559, 0);
+G2L["7d"]["Name"] = [[gg9]];
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color
+G2L["7e"] = Instance.new("Frame", G2L["59"]);
+G2L["7e"]["BorderSizePixel"] = 0;
+G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["7e"]["Size"] = UDim2.new(0.3366174101829529, 0, 0.7241379022598267, 0);
+G2L["7e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7e"]["Position"] = UDim2.new(0.07060755044221878, 0, 0.07586207240819931, 0);
+G2L["7e"]["Name"] = [[color]];
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.Frame
+G2L["7f"] = Instance.new("Frame", G2L["7e"]);
+G2L["7f"]["BorderSizePixel"] = 0;
+G2L["7f"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
+G2L["7f"]["Size"] = UDim2.new(0.5633137226104736, 0, 1.1482230424880981, 0);
+G2L["7f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7f"]["Position"] = UDim2.new(0.21370729804039001, 0, 0.07558652758598328, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.Frame.ColorWheel_LocalScript
+G2L["80"] = Instance.new("LocalScript", G2L["7f"]);
+G2L["80"]["Name"] = [[ColorWheel_LocalScript]];
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.Frame.Frame
+G2L["81"] = Instance.new("Frame", G2L["7f"]);
+G2L["81"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["81"]["Size"] = UDim2.new(0.30927833914756775, 0, 0.12444444745779037, 0);
+G2L["81"]["Position"] = UDim2.new(0.3294973373413086, 0, 0.612535834312439, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.Frame.Frame.UICorner
+G2L["82"] = Instance.new("UICorner", G2L["81"]);
+
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.Frame.ColorWheel
+G2L["83"] = Instance.new("ImageButton", G2L["7f"]);
+G2L["83"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["83"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["83"]["Image"] = [[rbxassetid://11224004075]];
+G2L["83"]["Size"] = UDim2.new(1.0309277772903442, 0, 0.4444444477558136, 0);
+G2L["83"]["Name"] = [[ColorWheel]];
+G2L["83"]["Position"] = UDim2.new(0.4968148469924927, 0, 0.33627647161483765, 0);
+G2L["83"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.Frame.ColorWheel.Cursor
+G2L["84"] = Instance.new("ImageLabel", G2L["83"]);
+G2L["84"]["ZIndex"] = 4;
+G2L["84"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["84"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["84"]["Image"] = [[rbxassetid://11226149359]];
+G2L["84"]["Size"] = UDim2.new(0.15000000596046448, 0, 0.15000000596046448, 0);
+G2L["84"]["Name"] = [[Cursor]];
+G2L["84"]["BackgroundTransparency"] = 1;
+G2L["84"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.Frame.ValueSelector
+G2L["85"] = Instance.new("TextButton", G2L["7f"]);
+G2L["85"]["Active"] = false;
+G2L["85"]["AutoButtonColor"] = false;
+G2L["85"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["85"]["Selectable"] = false;
+G2L["85"]["Size"] = UDim2.new(0.30927833914756775, 0, 0.4444444477558136, 0);
+G2L["85"]["Name"] = [[ValueSelector]];
+G2L["85"]["Text"] = [[]];
+G2L["85"]["Position"] = UDim2.new(-0.4517476260662079, 0, 0.1242179349064827, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.Frame.ValueSelector.UIGradient
+G2L["86"] = Instance.new("UIGradient", G2L["85"]);
+G2L["86"]["Rotation"] = -90;
+G2L["86"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.Frame.ValueSelector.UIStroke
+G2L["87"] = Instance.new("UIStroke", G2L["85"]);
+G2L["87"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.Frame.ValueSelector.Cursor
+G2L["88"] = Instance.new("Frame", G2L["85"]);
+G2L["88"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["88"]["Size"] = UDim2.new(1, 0, 0.05000000074505806, 0);
+G2L["88"]["Name"] = [[Cursor]];
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.gg9
+G2L["89"] = Instance.new("Frame", G2L["7e"]);
+G2L["89"]["BorderSizePixel"] = 0;
+G2L["89"]["BackgroundColor3"] = Color3.fromRGB(135, 46, 204);
+G2L["89"]["Size"] = UDim2.new(0.4731707274913788, 0, 0.01428571529686451, 0);
+G2L["89"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["89"]["Position"] = UDim2.new(0.25853657722473145, 0, 0.03289911150932312, 0);
+G2L["89"]["Name"] = [[gg9]];
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.lol2
+G2L["8a"] = Instance.new("TextButton", G2L["7e"]);
+G2L["8a"]["TextWrapped"] = true;
+G2L["8a"]["TextStrokeTransparency"] = 0;
+G2L["8a"]["BorderSizePixel"] = 0;
+G2L["8a"]["TextScaled"] = true;
+G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
+G2L["8a"]["TextSize"] = 22;
+G2L["8a"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8a"]["Size"] = UDim2.new(0.4243902564048767, 0, 0.08571429550647736, 0);
+G2L["8a"]["Name"] = [[lol2]];
+G2L["8a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8a"]["Text"] = [[back to normal]];
+G2L["8a"]["Position"] = UDim2.new(0.28713348507881165, 0, 0.07132626324892044, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.lol2.UITextSizeConstraint
+G2L["8b"] = Instance.new("UITextSizeConstraint", G2L["8a"]);
+G2L["8b"]["MaxTextSize"] = 22;
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.lol
+G2L["8c"] = Instance.new("TextLabel", G2L["7e"]);
+G2L["8c"]["TextWrapped"] = true;
+G2L["8c"]["BorderSizePixel"] = 0;
+G2L["8c"]["TextScaled"] = true;
+G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["8c"]["TextSize"] = 20;
+G2L["8c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["Size"] = UDim2.new(0.995121955871582, 0, 0.0952381044626236, 0);
+G2L["8c"]["ClipsDescendants"] = true;
+G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8c"]["Text"] = [[Executor Color]];
+G2L["8c"]["Name"] = [[lol]];
+G2L["8c"]["BackgroundTransparency"] = 1;
+G2L["8c"]["Position"] = UDim2.new(0, 0, -0.06262875348329544, 0);
+
+-- StarterGui.EVONUI.MAIN.frames.settings.color.lol.UITextSizeConstraint
+G2L["8d"] = Instance.new("UITextSizeConstraint", G2L["8c"]);
+G2L["8d"]["MaxTextSize"] = 20;
+
+-- StarterGui.EVONUI.MAIN.gg9
+G2L["8e"] = Instance.new("ImageLabel", G2L["4"]);
+G2L["8e"]["ZIndex"] = 0;
+G2L["8e"]["BorderSizePixel"] = 0;
+G2L["8e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8e"]["ImageColor3"] = Color3.fromRGB(106, 55, 120);
+G2L["8e"]["ImageTransparency"] = 0.6000000238418579;
+G2L["8e"]["Image"] = [[rbxassetid://15114678644]];
+G2L["8e"]["Size"] = UDim2.new(1.1247947216033936, 0, 1.1507693529129028, 0);
+G2L["8e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8e"]["Name"] = [[gg9]];
+G2L["8e"]["BackgroundTransparency"] = 1;
+G2L["8e"]["Position"] = UDim2.new(-0.05824347585439682, 0, -0.07614201307296753, 0);
+
+-- StarterGui.EVONUI.MAIN.UICorner
+G2L["8f"] = Instance.new("UICorner", G2L["4"]);
+
+
+-- StarterGui.EVONUI.MAIN.UIStroke
+G2L["90"] = Instance.new("UIStroke", G2L["4"]);
+G2L["90"]["Thickness"] = 5;
+G2L["90"]["Transparency"] = 0.800000011920929;
+G2L["90"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.EVONUI.ImageButton
+G2L["91"] = Instance.new("ImageButton", G2L["1"]);
+G2L["91"]["BorderSizePixel"] = 0;
+G2L["91"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["91"]["Image"] = [[rbxassetid://15204016915]];
+G2L["91"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["91"]["Visible"] = false;
+
+-- StarterGui.EVONUI.LocalScript
+local function C_3()
+local script = G2L["3"];
+	--[[fix ui dupe
 	if evon and not _G.evon == true then
 		print("Evon is already running!")
 		return
@@ -1234,6 +1404,7 @@ local function LTSXAE_fake_script() -- EVONUI.LocalScript
 		game.Loaded:Wait()
 		notLoaded:Destroy()
 	end
+	--]]
 	--locals
 	local main = script.Parent.MAIN
 	local frames = main.frames
@@ -1853,7 +2024,7 @@ local function LTSXAE_fake_script() -- EVONUI.LocalScript
 				ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				ImageLabel.BorderSizePixel = 0
 				ImageLabel.Size = UDim2.new(1, 0, 0.66842103, 0)
-				ImageLabel.Image = "rbxassetid://15204016915"
+				ImageLabel.Image = "rbxassetid://15115110089"
 				ImageLabel.ImageTransparency = 0.400
 	
 				UICorner_2.Parent = ImageLabel
@@ -2067,6 +2238,37 @@ local function LTSXAE_fake_script() -- EVONUI.LocalScript
 			src.RemoteHighlight_.Text = Highlight(s, {"FireServer", "fireServer", "InvokeServer", "invokeServer"})
 			src.Numbers_.Text = numbers(s)
 			src.Strings_.Text = strings(s)
+		end
+	end
+	
+	highlight_source("Text")
+	src.Changed:Connect(highlight_source)
+	
+	local frame = exeframe.txtbox.EditorFrame
+	local textbox = frame.Source
+	local textlab1 = frame.Frame.lol
+	
+	function updateScrollFrameSize()
+		frame.CanvasSize = UDim2.new(0, 0, 0, textbox.TextBounds.Y)
+	end
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(updateScrollFrameSize)
+	updateScrollFrameSize()
+	
+	local frame = exeframe.txtbox.EditorFrame
+	local src = frame.Frame.lol
+	local sr = frame.Frame
+	
+	local highlight_source = function(type)
+		if type == "Text" then
+			src.Text = Source.Text:gsub("\13", "")
+			src.Text = Source.Text:gsub("\t", "      ")
+			local s = src.Text
+			sr.Keywords_.Text = Highlight(s, lua_keywords)
+			sr.Globals_.Text = Highlight(s, global_env)
+			sr.RemoteHighlight_.Text = Highlight(s, {"FireServer", "fireServer", "InvokeServer", "invokeServer"})
+			sr.Numbers_.Text = numbers(s)
+			sr.Strings_.Text = strings(s)
 			local lin = 1
 			s:gsub("\n", function()
 				lin = lin + 1
@@ -2081,15 +2283,6 @@ local function LTSXAE_fake_script() -- EVONUI.LocalScript
 	highlight_source("Text")
 	src.Changed:Connect(highlight_source)
 	
-	local frame = exeframe.txtbox.EditorFrame
-	local textbox = frame.Source
-	
-	function updateScrollFrameSize()
-		frame.CanvasSize = UDim2.new(0, 0, 0, textbox.TextBounds.Y)
-	end
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(updateScrollFrameSize)
-	updateScrollFrameSize()
 	print("bugs founded (0)!")
 	
 	for i,v in pairs(exeframe.txtbox:GetDescendants()) do
@@ -2098,12 +2291,23 @@ local function LTSXAE_fake_script() -- EVONUI.LocalScript
 		end
 	end
 	
-end
-coroutine.wrap(LTSXAE_fake_script)()
-local function ZUPNB_fake_script() -- Frame_6.ColorWheel_LocalScript 
-	local script = Instance.new('LocalScript', Frame_6)
-
+end;
+task.spawn(C_3);
+-- StarterGui.EVONUI.MAIN.frames.executor.txtbox.EditorFrame.Frame.LocalScript
+local function C_36()
+local script = G2L["36"];
+	local textLabel = script.Parent.lol
+	local txtbox = script.Parent.Parent.Source
+	while wait() do
+		textLabel.Text = txtbox.Text
+	end
+end;
+task.spawn(C_36);
+-- StarterGui.EVONUI.MAIN.frames.settings.color.Frame.ColorWheel_LocalScript
+local function C_80()
+local script = G2L["80"];
 	
-end
-coroutine.wrap(ZUPNB_fake_script)()
-print("ui loaded from" .. script.Name)
+end;
+task.spawn(C_80);
+
+return G2L["1"], require;
