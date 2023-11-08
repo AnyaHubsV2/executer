@@ -287,6 +287,7 @@ local script = G2L["14"];
 	
 	script.Parent.check.MouseButton1Click:Connect(function()
 	if KeySystem:verifyKey(script.Parent.TextBox.Text) then
+game.CoreGui.KeySystem.Enabled = false
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/executer/main/EUI.lua'))()
 	else
 	script.Parent.TextBox.Text = "Key System Is Valid"
@@ -311,11 +312,11 @@ local script = G2L["20"];
 	local whitelist = {
 		admin1 = {
 			username = "AKM_97",
-			key = "aaa123"
+			key = "Ww123123"
 		},
 		admin2 = {
-			username = "AKM_999",
-			key = "Key2"
+			username = "sakpot",
+			key = "lol"
 		},
 	}
 	
@@ -333,6 +334,8 @@ local script = G2L["20"];
 		local enteredKey = keyTextBox.Text
 	
 		if isWhitelisted(enteredUsername, enteredKey) then
+game.CoreGui.KeySystem.Enabled = false
+loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/executer/main/EUI.lua'))()
 			print("ADMIN.")
 		else
 			print("NOT ADMIN.")
