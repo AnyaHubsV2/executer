@@ -256,9 +256,9 @@ local function a9(aa)
 		return _[aa.ClassName]
 
 	end;
-	local ab = getproperties(aa,true)_[aa.ClassName]=ab;
-	return ab 
-
+	local ab = getproperties(aa, true)
+	local myTable = {}
+	myTable[aa.ClassName] = ab
 end;
 
 local function ac()
@@ -580,14 +580,15 @@ local aV= {
 				local aW=gethiddenproperty(ao,ap)aR(ap,aW)end end end}local aX="Co is the best"local function aY(ao,aZ)if ax[ao.ClassName]then
 		return 
 	end;
-	local an=a9(ao)if#an then
+	local an=a9(ao) 
+	if#an then
 		if a==2 and string.len(table.concat(a1))>=f then
 			ac()a1={}
 		end;
 		X=X+1;
 		Y=Y..'\n<Item class="'..ao.ClassName..'" referent="RBX'..af(ao)..'">'Y=Y.."\n<Properties>"
 		for F,aC in pairs(an)do
-			ypcall(function()
+			pcall(function()
 				if a7[typeof(ao)] and a7[typeof(ao)][aC.Name]then
 					return 
 				end;
@@ -671,7 +672,7 @@ function func_SInstance(ao,bb,bd)W=false;bb=b8(bb)if a==2 then
 	end;
 	a1={}
 end;
-function DoSPlace(bb)
+local function DoSPlace(bb)
 	W=true;
 	X=0;
 	a0={}
@@ -696,11 +697,11 @@ function DoSPlace(bb)
 		end;
 		return false end 
 end;
-function func_SPlace(bb)
-	local bg=os.clock()
-	local bh=DoSPlace(bb)
-	local bi="Courtney ;("if m then
-		bi=bh and"The place has been saved to a file."or"Place didn't save :c no writefile or error"else bi=bh and"The place has been saved. Open it from the develop page on Roblox."or"Place didn't save :c something went wrong tell me"
+local function func_SPlace(bb)
+	local bg = os.clock()
+	local bh = DoSPlace(bb)
+	local bi = "Courtney ;("if m then
+		local bi = bh and"The place has been saved to a file."or"Place didn't save :c no writefile or error"else bi=bh and"The place has been saved. Open it from the develop page on Roblox."or"Place didn't save :c something went wrong tell me"
 	end;
 end;
 local bj=Q:GetMouse()
@@ -918,7 +919,7 @@ local bS;bS=bP.MouseButton1Click:connect(function()
 	local bV,bW=pcall(bT.GetProductInfo,bT,game.PlaceId)
 	if bV then
 		local bX,bY=bW.Name:gsub('%W','')bU=bU..bX.."_"
-	end;
+	end
 	func_SPlace(bU..tostring(game.PlaceId)..".rbxlx")
 	bM:Destroy()
 end)
